@@ -1,10 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    public enum CollectibleType
+    {
+        BigCoin,
+        Coin,
+        Food
+    }
     public Action PickedUp;
 
     [Header("Attributes")]
@@ -13,13 +17,6 @@ public class Collectible : MonoBehaviour
     public CollectibleType GetCollectibleType()
     {
         return collectibleType;
-    }
-
-    public enum CollectibleType
-    {
-        BigCoin,
-        Coin,
-        Food
     }
 
     protected virtual void Collect()

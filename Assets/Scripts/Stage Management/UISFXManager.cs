@@ -13,9 +13,7 @@ public class UISFXManager : MonoBehaviour
     InputSystemUIInputModule uiModule;
 
     // cached action instances (from the module or refs)
-    private InputAction navigateAction;
     private InputAction submitAction;
-    private InputAction clickAction;
 
     EventSystem eventSystem;
     GameObject currentlySelectedGameobject;
@@ -29,15 +27,14 @@ public class UISFXManager : MonoBehaviour
         if (uiModule != null)
         {
             // InputActionProperty -> .action returns the live InputAction instance
-            navigateAction = uiModule.move.action;
             submitAction = uiModule.submit.action;
-            clickAction = uiModule.leftClick.action;
         }
     }
 
     private void LateUpdate()
     {
         if (!eventSystem.enabled) return;
+        //Check for UI navigation
         if (eventSystem.currentSelectedGameObject != currentlySelectedGameobject)
         {
             //If there was a previously seleced object, this means the choice has changed, so play the sound
@@ -45,47 +42,23 @@ public class UISFXManager : MonoBehaviour
             {
                 uiAudioSource.PlayOneShot(uiMoveSound);
             }
-            currentlySelectedGameobject = eventSystem.currentSelectedGameObject; //set it initially
+            currentlySelectedGameobject = eventSystem.currentSelectedGameObject; //set the object to what is currently selected
         }
         else if(eventSystem.currentSelectedGameObject == null)
         {
+            //The UI screen has closed, so set this to null
             currentlySelectedGameobject = null;
         }
     }
     void OnEnable()
     {
         // subscribe safely (action may be null if not configured)
-        if (navigateAction != null) navigateAction.performed += OnNavigate;
         if (submitAction != null) submitAction.performed += OnSubmit;
-        if (clickAction != null) clickAction.performed += OnClick;
     }
 
     void OnDisable()
     {
-        if (navigateAction != null) navigateAction.performed -= OnNavigate;
         if (submitAction != null) submitAction.performed -= OnSubmit;
-        if (clickAction != null) clickAction.performed -= OnClick;
-    }
-
-    private void OnNavigate(InputAction.CallbackContext ctx)
-    {
-        //if (eventSystem.currentSelectedGameObject == null) return;
-        //print(currentlySelectedGameobject);
-        //print(eventSystem.currentSelectedGameObject);
-        //if(currentlySelectedGameobject != eventSystem.currentSelectedGameObject)
-        //{
-        //    currentlySelectedGameobject = eventSystem.currentSelectedGameObject; //means we have moved to a new element, so play sound
-        //    // avoid tiny noise triggering nav SFX (sticks have deadzones)
-        //    Vector2 v = ctx.ReadValue<Vector2>();
-        //    print("nsv");
-        //    if (v.sqrMagnitude > 0.01f)
-        //    {
-        //        Debug.Log("Navigate performed: " + v);
-        //        // Play navigation SFX
-        //        uiAudioSource.PlayOneShot(uiMoveSound);
-        //    }
-        //}
-
     }
 
     private void OnSubmit(InputAction.CallbackContext ctx)
@@ -95,15 +68,5 @@ public class UISFXManager : MonoBehaviour
         uiAudioSource.PlayOneShot(uiConfirmSound);
     }
 
-    private void OnClick(InputAction.CallbackContext ctx)
-    {
-        Debug.Log("Click performed");
-        // src.PlayOneShot(clickClip);
-        //
-        //if (eventSystem.currentSelectedGameObject == null && currentlySelectedGameobject) //if was deselected
-        //{
-        //    eventSystem.SetSelectedGameObject(currentlySelectedGameobject);
-        //}
-    }
 
 }

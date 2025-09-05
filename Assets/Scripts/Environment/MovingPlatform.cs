@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
@@ -31,6 +30,7 @@ public class MovingPlatform : MonoBehaviour
 
     public void Disengage()
     {
+        //Make the player get off the platform
         playerMovement = null;
     }
 
@@ -53,6 +53,7 @@ public class MovingPlatform : MonoBehaviour
         if (waiting) return;
         if (lerp < 1)
         {
+            //Move towards the position for now
             lerp += Time.fixedDeltaTime;
             Vector2 origPos = platform.position;
             Vector2 newPos = Vector3.Lerp(currentStartPos, currentEndPos, lerp);
@@ -79,6 +80,7 @@ public class MovingPlatform : MonoBehaviour
 
     IEnumerator WaitAtPosition()
     {
+        //Wait at the current position for a period of time.
         waiting = true;
         int waitTime = Random.Range(minWaitTime, maxWaitTime);
         yield return new WaitForSeconds(waitTime);

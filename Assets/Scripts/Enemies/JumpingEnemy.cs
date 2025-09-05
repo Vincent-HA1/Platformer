@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -38,7 +37,7 @@ public class JumpingEnemy : BaseEnemy
     {
         base.Update();
         float xOffset = jumping ? 0 : groundCheckXOffset; //if jumping, dont use the offset
-        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.2f, groundLayer);
+        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.2f, groundLayer); //offset the check so dont go over the ledge
         ManageJumpTimer();
     }
 
@@ -75,7 +74,7 @@ public class JumpingEnemy : BaseEnemy
                 }
 
             }
-            //Check if wall now in between plaeyr and the enemy. If so, have to cancel the chase, regardless of distance
+            //Check if wall now in between player and the enemy. If so, have to cancel the chase, regardless of distance
             else if(wallPlayerCheck.collider != null && wallDistance < playerDistance)
             {
                 //Stop moving for now
@@ -115,7 +114,6 @@ public class JumpingEnemy : BaseEnemy
         if(!canJump || hurt) return; //only some enemies can jump
         if (onGround && verticalVelocity < 0)
         {
-            print("Cancel jump");
             jumping = false;
         }
         if (playerDetected)
@@ -124,7 +122,7 @@ public class JumpingEnemy : BaseEnemy
             if(jumpTimer <= 0 && !jumping)
             {
                 //Set timer. If this is the start, then don't jump immediately
-                jumpTimer = UnityEngine.Random.Range(minJumpTime, maxJumpTime);
+                jumpTimer = Random.Range(minJumpTime, maxJumpTime);
                 if (!setInitialJumpTimer)
                 {
                     setInitialJumpTimer = true;
@@ -150,7 +148,6 @@ public class JumpingEnemy : BaseEnemy
 
     void PerformJump()
     {
-        print("perform jump");
         verticalVelocity = jumpForce;
         jumping = true;
     }
@@ -159,13 +156,14 @@ public class JumpingEnemy : BaseEnemy
     //Called when changing direction during patrolling.
     protected override void ChangeDirection()
     {
+        //If hit a wall, then need to turn backwards. Otherwise, choose a random direction
         if (!CanMove())
         {
             moveDirection = -moveDirection;
         }
         else
         {
-            int randomDir = UnityEngine.Random.Range(0, 2);
+            int randomDir = Random.Range(0, 2);
             moveDirection = randomDir == 0 ? moveDirection : -moveDirection;
         }
         base.ChangeDirection();
@@ -181,6 +179,7 @@ public class JumpingEnemy : BaseEnemy
     {
         if (!playerDetected)
         {
+            //If run into something, stop moving
             if (moving && !CanMove())
             {
                 moveTimer = 0;
@@ -198,14 +197,13 @@ public class JumpingEnemy : BaseEnemy
     {
         if (jumping)
         {
+            //If jumping, then once reaching a wall, flip immediately (i.e. bounce off it)
             if (!CanMove())
             {
-                print("flip");
                 moveDirection = -moveDirection;
             }
             return;
         }
-        //move towards the player if they are detected. 
         Vector2 difference = (player.position - transform.position);
         moveDirection = new Vector2(Mathf.Sign(difference.x), 0);
         //Move towards player while it is allowed (i.e. player is far away enough)

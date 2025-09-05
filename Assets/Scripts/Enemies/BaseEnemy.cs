@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
@@ -112,7 +110,7 @@ public class BaseEnemy : MonoBehaviour
     //Called when changing direction during patrolling.
     protected virtual void ChangeDirection()
     {
-        //Base, do not fill with anything
+        //Change direction, and restart the move. Here, is just restarting the move timers.
         moveTimer = UnityEngine.Random.Range(minPatrolTime, maxPatrolTime);
         moving = true;
     }
@@ -126,19 +124,7 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void DetectPlayer()
     {
-        //This is just meant to detect the player collider, it is not meant to detect the player
-        //Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
-        //if (playerCollider != null)
-        //{
-        //    playerColliderThere = true;
-        //    player = playerCollider.transform;
-        //}
-        //else
-        //{
-        //    playerColliderThere = false;
-        //}
-
-        //Detect distance to player
+        //Detect distance to player (to stop chasing if player has gotten too far away)
         if (!player || Vector2.Distance(player.position, transform.position) > maxDistanceToPlayer)
         {
             playerTooFar = true;
@@ -152,6 +138,7 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         if (hurt) return;
+        //Most enemies patrol, so run this
         Patrol();
     }
 

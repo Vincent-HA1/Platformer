@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Block : MonoBehaviour
@@ -34,11 +33,11 @@ public class Block : MonoBehaviour
 
     void GetHit()
     {
-        print("get hit");
         //Get hit, play the animation
         health -= 1;
         if(health <= maxHealth / 2)
         {
+            //At half health, show the damaged animation.
             anim.SetBool("Damaged", true);
         }
         if (health <= 0)
@@ -53,16 +52,16 @@ public class Block : MonoBehaviour
 
     void Destroy()
     {
+        //get broken
         Break?.Invoke();
         boxCollider.enabled = false;
         anim.SetBool("Destroyed", true);
-        //get broken
         StartCoroutine(DestroyCoroutine());
     }
 
     IEnumerator DestroyCoroutine()
     {
-
+        //Destroy block after set time
         yield return new WaitForSeconds(debrisTime);
         Destroy(gameObject);
     }

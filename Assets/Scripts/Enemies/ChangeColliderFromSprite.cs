@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ChangeColliderFromSprite : MonoBehaviour
 {
@@ -18,6 +16,7 @@ public class ChangeColliderFromSprite : MonoBehaviour
 
     void LateUpdate()
     {
+        //Update collider when sprite changes
         if (spriteRenderer.sprite != last)
         {
             last = spriteRenderer.sprite;

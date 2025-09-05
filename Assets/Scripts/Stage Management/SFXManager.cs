@@ -1,10 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.UI;
 
 public class SFXManager : MonoBehaviour
 {
@@ -37,6 +33,8 @@ public class SFXManager : MonoBehaviour
 
     void SubscribeToEvents()
     {
+        //Subscribe to all the events that need a sound effect to be triggered
+
         List<Collectible> allCollectibles = collectiblesParent.GetComponentsInChildren<Collectible>().ToList();
         //Collectible events on pick up
         foreach (Collectible collectible in allCollectibles)
@@ -50,8 +48,8 @@ public class SFXManager : MonoBehaviour
         }
 
         //Enemies
-        List<Enemy> allEnemies = enemiesParent.GetComponentsInChildren<Enemy>().ToList();
-        foreach(Enemy enemy in allEnemies)
+        List<BaseEnemy> allEnemies = enemiesParent.GetComponentsInChildren<BaseEnemy>().ToList();
+        foreach(BaseEnemy enemy in allEnemies)
         {
             enemy.Hit += () => SpawnSoundEffect(enemyHitSound);
             enemy.Death += () => SpawnSoundEffect(enemyDeathSound);

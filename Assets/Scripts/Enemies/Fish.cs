@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fish : BaseEnemy
@@ -24,7 +22,7 @@ public class Fish : BaseEnemy
 
     protected override void DetectPlayer()
     {
-        //Detect the player through collider. Bird never stops
+        //Detect the player through collider. 
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
         if (playerCollider != null && !returningToStartPoint)
         {
@@ -45,17 +43,17 @@ public class Fish : BaseEnemy
         if (hurt) return;
         if (returningToStartPoint)
         {
+            //Move to start point until you get there
             if(Vector2.Distance(startPoint, transform.position) <= 0.1f)
             {
-                print("at start ppint");
+                //If close enough, stop
                 returningToStartPoint = false;
                 playerDetected = false;
                 //start patrolling agian
-                moveDirection = new Vector2(UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1, 0);
+                moveDirection = new Vector2(Random.Range(0, 2) == 0 ? 1 : -1, 0);
             }
             else
             {
-                print("moving to start poit");
                 MoveTowardsTarget(startPoint);
             }
         }
@@ -63,13 +61,12 @@ public class Fish : BaseEnemy
         {
             if (!CanSwim())
             {
-                print(playerDetected);
-                //return to start point
+                //Reached an unpassable area, so return to start point
                 returningToStartPoint = true;
             }
             else
             {
-                print("moving to plaayer");
+                //Chase player
                 MoveTowardsTarget(player.position);
             }
 
@@ -86,7 +83,7 @@ public class Fish : BaseEnemy
         }
         else
         {
-            int randomDir = UnityEngine.Random.Range(0, 2);
+            int randomDir = Random.Range(0, 2);
             moveDirection = randomDir == 0 ? moveDirection : -moveDirection;
         }
         base.ChangeDirection();
@@ -94,8 +91,8 @@ public class Fish : BaseEnemy
 
     void MoveTowardsTarget(Vector2 target)
     {
+        //Tries to move in a linear way towards the target, avoiding jerky movements
         Vector2 current = transform.position;
-        //Vector2 target = player.position;
 
         Vector2 delta = target - current;
         float dist = delta.magnitude;
@@ -144,27 +141,9 @@ public class Fish : BaseEnemy
 
     bool CanSwim()
     {
-        //Check if there is wall ahead, or no water ahead
-        //raycast for wall
+        //Check if there is a wall or no water ahead
         RaycastHit2D wallHit = Physics2D.Raycast(transform.position, moveDirection, wallCheckDistance, groundLayer);
         RaycastHit2D waterHit = Physics2D.Raycast(transform.position, moveDirection, wallCheckDistance, waterLayer);
         return wallHit.collider == null && waterHit.collider != null;
-    }
-
-    protected override void OnTriggerEnter2D(Collider2D collision)
-    {
-        base.OnTriggerEnter2D(collision);
-        ////Check if this is ground
-        //int otherLayer = collision.gameObject.layer;
-        //print(collision.gameObject);
-        //if ((groundLayer.value & (1 << otherLayer)) == 0) return;
-        //print("GELL");
-        //if (playerDetected)
-        //{
-        //    print(playerDetected);
-        //    //return to start point
-        //    returningToStartPoint = true;
-        //}
-
     }
 }

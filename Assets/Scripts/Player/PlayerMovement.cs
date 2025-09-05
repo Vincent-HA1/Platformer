@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -95,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
     float xMovement;
     float currentHorizontalDir;
     Vector2 glideCheckSize;
-    Vector2 movingPlatformGroundCheckSize;
     Vector2 platformDelta;
 
     // Velocity state
@@ -147,10 +145,8 @@ public class PlayerMovement : MonoBehaviour
     bool inWater = false;
     bool waterAbove = false;
 
-    float health;
-    float currentGroundSpeed;
-
     bool blockHorizontalMovement = false;
+    float health;
 
     public void ReachedEndOfLevel()
     {
@@ -178,10 +174,8 @@ public class PlayerMovement : MonoBehaviour
         inputHandler = GetComponent<InputHandler>();
         boxCollider = GetComponent<BoxCollider2D>();
         glideCheckSize = footSize + new Vector2(0, 1f);
-        movingPlatformGroundCheckSize = footSize;// + new Vector2(0, 0.8f); //if on moving platform, account for ground a bit lower, because the platform may move
         spriteRenderer.color = Color.white;
         health = maxHealth;
-        currentGroundSpeed = groundMoveSpeed;
         anim.SetFloat("Horizontal", 1); //start by facing right
     }
 
@@ -191,7 +185,6 @@ public class PlayerMovement : MonoBehaviour
         // Update animator parameters
         UpdateAnimations();
         if (LevelManager.cannotAct) return;
-        //if (!canAct) return;
         CheckHurtTimer();
         ManageHitboxDirection();
         CheckInvincibilityTimer();
@@ -202,13 +195,8 @@ public class PlayerMovement : MonoBehaviour
         UpdateJumpBuffer();
         CheckAttackBuffer();
         CheckKickTimer();
-
         // Process movement input and potentially trigger jump
         ProcessMovementInput();
-
-
-
-
     }
 
 
@@ -232,10 +220,9 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckForSurfaces()
     {
-        Vector2 groundCheckSize = platformToFollow == null ? footSize : movingPlatformGroundCheckSize;
         Vector3 offset =  platformToFollow == null ? Vector2.zero : new Vector2(0, -0.1f);
-        bool left = Physics2D.OverlapBox(leftFootPoint.position + offset, groundCheckSize, 0, groundLayer);
-        bool right = Physics2D.OverlapBox(rightFootPoint.position + offset, groundCheckSize, 0, groundLayer);
+        bool left = Physics2D.OverlapBox(leftFootPoint.position + offset, footSize, 0, groundLayer);
+        bool right = Physics2D.OverlapBox(rightFootPoint.position + offset, footSize, 0, groundLayer);
         bool leftGlideCheck = Physics2D.OverlapBox((Vector2)leftFootPoint.position - new Vector2(0, 0.3f), glideCheckSize, 0, groundLayer);
         bool rightGlideCheck = Physics2D.OverlapBox((Vector2)rightFootPoint.position - new Vector2(0, 0.3f), glideCheckSize, 0, groundLayer);
         onGround = left || right;
@@ -251,7 +238,6 @@ public class PlayerMovement : MonoBehaviour
             if(verticalVelocity <= 0)
             {
                 additiveForce = Vector2.zero;
-                //currentGroundSpeed = groundMoveSpeed;
             }
         }
 
@@ -260,9 +246,7 @@ public class PlayerMovement : MonoBehaviour
         waterAbove = hit.collider != null;
         if (hit.collider == null && verticalVelocity > 0 && inWater) //so if the raycast shows we are at the top of the water
         {
-            print("Out of the water");
             //get out of the water
-            //PerformJump(true);
             GetOutOfWater();
         }
     }
@@ -567,13 +551,18 @@ public class PlayerMovement : MonoBehaviour
     {
         //set all states to false when in water
         inWater = true;
+        if(verticalVelocity > 0) verticalVelocity /= 2; //halve velocity
         ResetStates();
     }
 
     void GetOutOfWater()
     {
         inWater = false;
-        PerformJump(true, false); //jump out
+        //Only if going up, then jump out of water
+        if(verticalVelocity > 0 && !waterAbove)
+        {
+            PerformJump(true, false); //jump out
+        }
         //So if got out of the water, reduce the kick lag again
         if (!canKick)
         {
@@ -584,11 +573,6 @@ public class PlayerMovement : MonoBehaviour
     // ----------------------------------------
     // Platform Logic
     // ----------------------------------------
-    public void SetPlatformToFollow(MovingPlatform platform)
-    {
-        platformToFollow = platform;
-    }
-
     public void SetPlatformDelta(Vector2 movement)
     {
         platformDelta = movement;
@@ -655,7 +639,6 @@ public class PlayerMovement : MonoBehaviour
     {
         hurt = true;
         Death?.Invoke();
-        movementInput = Vector2.zero;
         ResetStates();
         inWater = false;
         boxCollider.enabled = false;
@@ -667,6 +650,9 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
         stoppedHoldingJump = false;
         gliding = false;
+        movementInput = Vector2.zero;
+        verticalVelocity = 0;
+        attacking = false;
         StopKick();
     }
 
@@ -720,7 +706,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Decide on stats based on if in water or not
-        float moveSpeed = inWater ? swimSpeed : currentGroundSpeed;
+        float moveSpeed = inWater ? swimSpeed : groundMoveSpeed;
         float gravityValue = inWater ? waterGravityForce : gravityForce;
         float maximumNegativeVelocity = inWater ? terminalWaterNegativeVelocity : (gliding ? glideNegativeVelocity : terminalNegativeVelocity);
 
@@ -746,27 +732,14 @@ public class PlayerMovement : MonoBehaviour
             : Mathf.Max(maximumNegativeVelocity, verticalVelocity + gravityValue * Time.fixedDeltaTime);
         if (kicking)
         {
-            //Make sure to move the velocity to 0 from the correct direction when kicking
-            //horizontalVelocity = anim.GetFloat("Horizontal") == 1?
-            //    Mathf.Max(0, horizontalVelocity + kickSlowdownRate * anim.GetFloat("Horizontal") * Time.fixedDeltaTime):
-            //    Mathf.Min(0, horizontalVelocity + kickSlowdownRate * anim.GetFloat("Horizontal") * Time.fixedDeltaTime);
-            //print(horizontalVelocity);
             float speedRatio = Mathf.Clamp01(1 - kickTimer / kickLength);
             float curveValue = kickAccelCurve.Evaluate(speedRatio);
             //Accelerate by the value on the curve. The curve starts slow and then spikes (so after a short period, acceleration is instant)
             float accelThisFrame = curveValue * kickSlowdownRate * anim.GetFloat("Horizontal");
-            //horizontalVelocity = anim.GetFloat("Horizontal") == 1 ?
-            //    Mathf.Max(0, horizontalVelocity + accelThisFrame * Time.fixedDeltaTime) :
-            //    Mathf.Min(0, horizontalVelocity + accelThisFrame * Time.fixedDeltaTime);
+            //Make sure to move the velocity to 0 from the correct direction when kicking
             horizontalVelocity = anim.GetFloat("Horizontal") * kickInitialSpeed * curveValue;
         }
-        //// Detect peak of jump
-        //if (verticalVelocity < 0f && isJumping && !peakOfJump)
-        //{
-        //    peakOfJump = true;
-        //    Debug.Log($"Jump peak at height: {transform.position.y}");
-        //}
-
+        //If no horizontal movement, block it
         if (blockHorizontalMovement) dx = 0;
         Vector2 finalMovement = new Vector2(dx, dy);
 
@@ -776,7 +749,7 @@ public class PlayerMovement : MonoBehaviour
             finalMovement += platformDelta;
         }
 
-        finalMovement += additiveForce;
+        finalMovement += additiveForce; //add any additional force.
 
         // Apply movement to Rigidbody2D
         rigid.MovePosition(rigid.position + finalMovement);
@@ -788,10 +761,7 @@ public class PlayerMovement : MonoBehaviour
         health -= 1;
         hurtTimer = hurtTime;
         hurt = true;
-        movementInput = Vector2.zero;
-        verticalVelocity = 0;
-        attacking = false;
-        kicking = false;
+        ResetStates();
         Hit?.Invoke(health);
         if (health <= 0)
         {
@@ -806,7 +776,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = respawnPosition;
         health = maxHealth;
         hurt = false;
-        verticalVelocity = 0;
+        ResetStates();
         inWater = false;
         boxCollider.enabled = true;
         hurtTimer = 0;
@@ -828,7 +798,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Water") && !(!waterAbove && verticalVelocity > 0) && canGlide) //So if we are in water (and it is not shallow by using canGlide), and not currently jumping out of it, then start swimming
+        if (collision.CompareTag("Water") && !(!waterAbove && verticalVelocity > 0) && canGlide && !inWater) //So if we are in water (and it is not shallow by using canGlide), and not currently jumping out of it, then start swimming
         {
             StartSwimming();
         }
@@ -851,12 +821,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        /*
-        if (collision.CompareTag("Water"))
-        {
-            GetOutOfWater();
-        }
-        */
+        //if (collision.CompareTag("Water") && inWater)
+        //{
+        //    GetOutOfWater();
+        //}
         if (collision.CompareTag("MovingPlatform") && platformToFollow)
         {
             ExitPlatform();
@@ -884,12 +852,12 @@ public class PlayerMovement : MonoBehaviour
             jumpForce *= 3;
             PerformJump(true, false);
             jumpForce = temp;
-            //currentGroundSpeed = superSpringMoveSpeed;
             additiveForce = new Vector2(currentHorizontalDir, 0) * springXModifier; //Add this onto the player's movement as a result of touching this spring
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        //CHECK FOR COLLISIONS WITH SOLID SURFACES
         //Check if this is ground
         int otherLayer = collision.gameObject.layer;
         if ((groundLayer.value & (1 << otherLayer)) == 0) return;

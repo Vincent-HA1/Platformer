@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class Bird : BaseEnemy
 {
@@ -37,6 +34,7 @@ public class Bird : BaseEnemy
 
     void MoveTowardsPlayer()
     {
+        //Tries to move in a linear way towards the target, avoiding jerky movements
         Vector2 current = transform.position;
         Vector2 target = player.position;
 

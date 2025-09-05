@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,17 +48,22 @@ public class BushEnemy : BaseEnemy
     {
         base.Start();
         boxCollider = GetComponent<BoxCollider2D>();
-        boxCollider.enabled = false; //while hiding, not collidable
-        hiding = true;
+        Hide();
     }
 
+    void Hide()
+    {
+        hiding = true;
+        moving = false;
+        boxCollider.enabled = false; //Disable enemy collider while hiding
+    }
 
     protected override void Update()
     {
         base.Update();
         float xOffset = jumping ? 0 : groundCheckXOffset; //if jumping, dont use the offset
-        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.2f, groundLayer);
-        detectionCollider.enabled = hiding;
+        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.2f, groundLayer); //offset the check so dont go over the ledge
+        detectionCollider.enabled = hiding; //only have detection collider open when hiding
         ManageJumpTimer();
     }
 
@@ -92,21 +96,8 @@ public class BushEnemy : BaseEnemy
             RaycastHit2D wallPlayerCheck = Physics2D.Raycast(transform.position, moveDirection, playerCheckDistance, groundLayer);
             float playerDistance = playerHit.collider == null ? 0 : Vector2.Distance(playerHit.point, transform.position);
             float wallDistance = Vector2.Distance(wallPlayerCheck.point, transform.position);
-            //if (wallPlayerCheck.collider == null || wallDistance > playerDistance)
-            //{
-            //    if (!playerDetected)
-            //    {
-            //        //So player in front of wall, so can detect now
-            //        playerDetected = true;
-            //        moving = true;
-            //    }
-
-            //}
-            //else
-            //{
-            //    playerDetected = false;
-            //}
-            if(wallPlayerCheck.collider != null && wallDistance <= playerDistance)
+            //If wall now in between player and the enemy. If so, have to cancel the chase, regardless of distance
+            if (wallPlayerCheck.collider != null && wallDistance <= playerDistance)
             {
                 playerDetected = false;
                 moveTimer = 0;
@@ -115,7 +106,7 @@ public class BushEnemy : BaseEnemy
         }
         else
         {
-            //Stop moving for now
+            //Stop moving for now, as player too far
             if (playerDetected)
             {
                 playerDetected = false;
@@ -140,7 +131,6 @@ public class BushEnemy : BaseEnemy
         if (!canJump || hurt) return; //only some enemies can jump
         if (onGround && verticalVelocity < 0)
         {
-            print("Cancel jump");
             jumping = false;
         }
         if (playerDetected)
@@ -149,7 +139,7 @@ public class BushEnemy : BaseEnemy
             if (jumpTimer <= 0 && !jumping)
             {
                 //Set timer. If this is the start, then don't jump immediately
-                jumpTimer = UnityEngine.Random.Range(minJumpTime, maxJumpTime);
+                jumpTimer = Random.Range(minJumpTime, maxJumpTime);
                 if (!setInitialJumpTimer)
                 {
                     setInitialJumpTimer = true;
@@ -175,7 +165,6 @@ public class BushEnemy : BaseEnemy
 
     void PerformJump()
     {
-        print("perform jump");
         verticalVelocity = jumpForce;
         jumping = true;
     }
@@ -184,13 +173,14 @@ public class BushEnemy : BaseEnemy
     //Called when changing direction during patrolling.
     protected override void ChangeDirection()
     {
+        //If hit a wall, then need to turn backwards. Otherwise, choose a random direction
         if (!CanMove())
         {
             moveDirection = -moveDirection;
         }
         else
         {
-            int randomDir = UnityEngine.Random.Range(0, 2);
+            int randomDir = Random.Range(0, 2);
             moveDirection = randomDir == 0 ? moveDirection : -moveDirection;
         }
         base.ChangeDirection();
@@ -199,54 +189,40 @@ public class BushEnemy : BaseEnemy
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
+        //Chase after player
         if (playerDetected)
         {
             if(!hurt) MoveTowardsPlayer();
         }
         else
         {
+            //If player not there, hide
             if (!hiding && onGround)
             {
-                print("not hiding");
-                //hide
-                hiding = true;
-                moving = false;
-                boxCollider.enabled = false;
+                Hide();
             }
         }
         ApplyMovement();
     }
 
+
+
     protected override void Patrol()
     {
-        //if (!playerDetected)
-        //{
-        //    if (moving && !CanMove())
-        //    {
-        //        moveTimer = 0;
-        //    }
-        //}
-        //else
-        //{
-        //    MoveTowardsPlayer();
-
-        //}
-
+        //Bush Enemy does not patrol
     }
 
     void MoveTowardsPlayer()
     {
         if (jumping)
         {
+            //If jumping, then once reaching a wall, flip immediately (i.e. bounce off it)
             if (!CanMove())
             {
-                print("flip");
                 moveDirection = -moveDirection;
             }
             return;
         }
-        print("move towards player");
-        //move towards the player if they are detected. 
         Vector2 difference = (player.position - transform.position);
         moveDirection = new Vector2(Mathf.Sign(difference.x), 0);
         //Move towards player while it is allowed (i.e. player is far away enough)

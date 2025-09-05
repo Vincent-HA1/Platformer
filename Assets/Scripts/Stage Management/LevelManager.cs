@@ -134,14 +134,9 @@ public class LevelManager : MonoBehaviour
         currentCheckpoint = checkpoint;
     }
 
-    //void HealPlayer()
-    //{
-    //    player.Heal(1);
-    //    UpdateHealth(player.Health);
-    //}
-
     void UpdateHealth(float health)
     {
+        //Update the UI for health
         hudManager.UpdateHealthAmount(health);
     }
 
