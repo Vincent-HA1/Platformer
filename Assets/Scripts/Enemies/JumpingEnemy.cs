@@ -58,7 +58,7 @@ public class JumpingEnemy : BaseEnemy
         {
             player = playerHit.collider.transform;
         }
-        if (playerHit.collider != null || !playerTooFar && playerDetected)
+        if ((playerHit.collider != null || !playerTooFar && playerDetected) && CanMove()) //Can only detect player if can move
         {
             //Check if wall is not in between the player and the enemy by doing the same raycast but for the ground
             RaycastHit2D wallPlayerCheck = Physics2D.Raycast(transform.position, moveDirection, playerCheckDistance, groundLayer);

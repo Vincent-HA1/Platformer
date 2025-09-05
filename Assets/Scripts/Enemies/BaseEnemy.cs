@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
@@ -152,7 +153,16 @@ public class BaseEnemy : MonoBehaviour
         {
             GetHit();
         }
+        if (collision.CompareTag("Gap") && !LevelManager.cannotAct) //so if not already dead
+        {
+            StartCoroutine(AutomaticDeath());
+        }
+    }
 
+    IEnumerator AutomaticDeath()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject); //Die without triggering anything if fall off the stage
     }
 
     protected virtual void GetHit()
