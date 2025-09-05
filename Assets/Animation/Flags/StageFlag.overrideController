@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StageFlag
+  m_Controller: {fileID: 9100000, guid: a20c9696d6e7bef48accd2bf63764f0b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 509277f138d684346952057b0ada838d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 64895babe83559047a28d2c0b3f0d522, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 825c3ad9a425fe340880f03b7c6008a1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 72354d3e014a3184fae4282bcf4bbbc8, type: 2}

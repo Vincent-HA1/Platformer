@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Super Spring
+  m_Controller: {fileID: 9100000, guid: 7a2bc2ac3ce200a409033359333134ec, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d077bebff6bb9b641b89119651779e63, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ae84ce384d8154146bae770df9ce6559, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1def2f2b2a268ae4db9d92fa016a64db, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6ab42b7431589014a97121b4f2dcd24b, type: 2}

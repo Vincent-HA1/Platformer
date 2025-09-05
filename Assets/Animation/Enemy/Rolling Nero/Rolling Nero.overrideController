@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Rolling Nero
+  m_Controller: {fileID: 9100000, guid: 3a5680a94a3c7fc43b6b7dc46701c91e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 1bcb95899ac80cf48881a025a29ac4ca, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7835c66471af7234aa854f6fb0213bfd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2967cc5453b3a2b4da5ae73a24fcdbee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3e9d47f17e3b6b943a2161c39dca5d9c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2167aeec881170d429a21155787f0614, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9c8f1c6506a02fc42ae19ae372f0f2f6, type: 2}
