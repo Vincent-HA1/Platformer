@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6126710667875635495
+--- !u!1 &4346642360246016708
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4037126044252776283}
-  - component: {fileID: 278634151624104701}
-  - component: {fileID: 6041010185914355487}
+  - component: {fileID: 1095892598091135297}
+  - component: {fileID: 5930964893473231506}
+  - component: {fileID: 467709420431010562}
+  - component: {fileID: 5487826181754497923}
   m_Layer: 0
-  m_Name: FlagGet
+  m_Name: SFXManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4037126044252776283
+--- !u!4 &1095892598091135297
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126710667875635495}
+  m_GameObject: {fileID: 4346642360246016708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5951762, y: -1.1625595, z: -0.35198128}
+  m_LocalPosition: {x: 19.440287, y: 2.0312583, z: -0.49290797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &278634151624104701
+--- !u!114 &5930964893473231506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346642360246016708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24379a6ed78fc84b9075c32967c02d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  collectiblesParent: {fileID: 0}
+  checkpointsParent: {fileID: 0}
+  enemiesParent: {fileID: 0}
+  blocksParent: {fileID: 0}
+  jumpSound: {fileID: 505066711286351902, guid: 088321644891925418b8182132a1ee67, type: 3}
+  playerHitSound: {fileID: 7203002742881799541, guid: 1d9464aaebff47542aa960f2b960639c, type: 3}
+  playerKickSound: {fileID: 6126710667875635495, guid: c04eb9ed68b85dd4cae3d8822e485c58, type: 3}
+  enemyHitSound: {fileID: 1549979658317049374, guid: fea92c4285bfdf4428b0be043cdb803b, type: 3}
+  enemyDeathSound: {fileID: 7848062893853481194, guid: f1f9c11aaca75bc4193158be435927c3, type: 3}
+  bounceSound: {fileID: 6126710667875635495, guid: f745766f365423e4b8acffa2f13abd34, type: 3}
+  coinGetSound: {fileID: 7679075365278600415, guid: 731f62ea45325ef45aa7fadc3d31821e, type: 3}
+  rockHitSound: {fileID: 6434518901459739979, guid: b8312fe06b4c1794ba0980e6bccc00c9, type: 3}
+  rockDestroySound: {fileID: 1823328576927535806, guid: 1c07aa6b18bf98945a4ed20a110fa33a, type: 3}
+  eatSound: {fileID: 1420655728643452378, guid: bb584e8e8031dc54294c008621de8b76, type: 3}
+  flagGetSound: {fileID: 6126710667875635495, guid: 0e13fef623fdc694ba372e4b57de793f, type: 3}
+--- !u!82 &467709420431010562
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126710667875635495}
+  m_GameObject: {fileID: 4346642360246016708}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6237340119654497625, guid: dd0766d3d453cc84a81f74d45c231171, type: 2}
-  m_audioClip: {fileID: 8300000, guid: cf4da5988617d0148b3379a47016282a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.289
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.702
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -129,16 +158,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6041010185914355487
+--- !u!114 &5487826181754497923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126710667875635495}
+  m_GameObject: {fileID: 4346642360246016708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37a2e37e15d78cb4185e9a5327edbde2, type: 3}
+  m_Script: {fileID: 11500000, guid: d194fbab478aea74a872ab0204762315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopingSound: 0
+  uiMoveSound: {fileID: 8300000, guid: 820eeff69b1adc4439f68161b05d5eea, type: 3}
+  uiConfirmSound: {fileID: 8300000, guid: e1567d1bd496d5c439e53767267ebacf, type: 3}

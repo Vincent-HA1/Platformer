@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
 
     void AssignEvents()
     {
-        pauseMenu.Quit += QuitGame;
+        pauseMenu.Quit += QuitLevel;
         //Checkpoint events
         checkpoints = checkpointsParent.GetComponentsInChildren<Checkpoint>().ToList();
         List<Collectible> allCollectibles = collectiblesParent.GetComponentsInChildren<Collectible>().ToList();
@@ -203,7 +203,7 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("StageSelect"); 
     }
 
-    void QuitGame()
+    void QuitLevel()
     {
         EventSystem.current.enabled = false;
         StartCoroutine(QuitAfterFade());
@@ -216,6 +216,6 @@ public class LevelManager : MonoBehaviour
         sceneFadeAnimator.SetTrigger("FadeOut");
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene("StageSelect");
     }
 }

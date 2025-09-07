@@ -32,6 +32,9 @@ public class StageSelectManager : MonoBehaviour
     SaveData saveData;
     List<StageWaypoint> stageWaypoints;
 
+    float exitTimer;
+    float exitTime = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +77,18 @@ public class StageSelectManager : MonoBehaviour
         UpdateAnims();
         MoveToWaypoint();
         CheckToLoadStage();
+        if (inputHandler.jumpPressed)
+        {
+            exitTimer = exitTime;
+        }
+        if(inputHandler.jumpHeld)
+        {
+            exitTimer -= Time.deltaTime;
+            if (exitTimer <= 0 && !loadingScene)
+            {
+                StartCoroutine(QuitToTitle());
+            }
+        }
     }
 
     Vector2 lastDirection;
@@ -188,5 +203,14 @@ public class StageSelectManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
         SceneManager.LoadScene(stageWaypoints[currentWaypoint].GetStage()); //Load the stage selected
+    }
+
+    IEnumerator QuitToTitle()
+    {
+        loadingScene = true;
+        sceneFadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        SceneManager.LoadScene("TitleScreen"); //Load the stage selected
     }
 }

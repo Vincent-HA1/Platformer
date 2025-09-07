@@ -11,7 +11,11 @@ public class TitleScreen : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] Button startButton;
+    [SerializeField] Button optionsButton;
     [SerializeField] Button quitButton;
+    [SerializeField] GameObject titleScreen;
+    [SerializeField] GameObject optionsScreen;
+    [SerializeField] UIBar masterBar;
 
 
     // Start is called before the first frame update
@@ -23,6 +27,7 @@ public class TitleScreen : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(startButton.gameObject);
         Time.timeScale = 1;
         startButton.onClick.AddListener(LoadScene);
+        optionsButton.onClick.AddListener(OpenOptions);
         quitButton.onClick.AddListener(QuitGame);
     }
 
@@ -32,7 +37,25 @@ public class TitleScreen : MonoBehaviour
         {
             SaveSystem.DeleteSave();
         }
+        if (Input.GetKeyDown("k"))
+        {
+            if (optionsScreen.activeInHierarchy)
+            {
+                //close it
+                optionsScreen.SetActive(false);
+                titleScreen.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+            }
+        }
     }
+    
+    void OpenOptions()
+    {
+        optionsScreen.SetActive(true);
+        titleScreen.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(masterBar.leftArrow.gameObject); //top of options screen
+    }
+
     void LoadScene()
     {
         StartCoroutine(LoadSceneAfterFade());

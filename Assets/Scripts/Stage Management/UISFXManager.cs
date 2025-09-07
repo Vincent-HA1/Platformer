@@ -14,9 +14,13 @@ public class UISFXManager : MonoBehaviour
 
     // cached action instances (from the module or refs)
     private InputAction submitAction;
+    private InputAction navigateAction;
+
 
     EventSystem eventSystem;
     GameObject currentlySelectedGameobject;
+
+    bool navigated = false;
     void Awake()
     {
         uiAudioSource = GetComponent<AudioSource>();
@@ -28,6 +32,7 @@ public class UISFXManager : MonoBehaviour
         {
             // InputActionProperty -> .action returns the live InputAction instance
             submitAction = uiModule.submit.action;
+            navigateAction = uiModule.move.action;
         }
     }
 
@@ -35,10 +40,11 @@ public class UISFXManager : MonoBehaviour
     {
         if (!eventSystem.enabled) return;
         //Check for UI navigation
-        if (eventSystem.currentSelectedGameObject != currentlySelectedGameobject)
+        if (eventSystem.currentSelectedGameObject != currentlySelectedGameobject && eventSystem.currentSelectedGameObject!=null)
         {
+            print(eventSystem.currentSelectedGameObject);
             //If there was a previously seleced object, this means the choice has changed, so play the sound
-            if(currentlySelectedGameobject != null)
+            if(currentlySelectedGameobject != null && navigated) //check if player has moved as well, or if this was a manual selection
             {
                 uiAudioSource.PlayOneShot(uiMoveSound);
             }
@@ -49,16 +55,25 @@ public class UISFXManager : MonoBehaviour
             //The UI screen has closed, so set this to null
             currentlySelectedGameobject = null;
         }
+        navigated = false;
     }
     void OnEnable()
     {
         // subscribe safely (action may be null if not configured)
         if (submitAction != null) submitAction.performed += OnSubmit;
+        if (navigateAction != null) navigateAction.performed += OnNavigate;
+
     }
 
     void OnDisable()
     {
         if (submitAction != null) submitAction.performed -= OnSubmit;
+        if (navigateAction != null) navigateAction.performed -= OnNavigate;
+    }
+
+    private void OnNavigate(InputAction.CallbackContext ctx)
+    {
+        navigated = true;
     }
 
     private void OnSubmit(InputAction.CallbackContext ctx)

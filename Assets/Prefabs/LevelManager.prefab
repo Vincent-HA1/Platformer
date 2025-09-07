@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6126710667875635495
+--- !u!1 &803220644476281535
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,67 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4037126044252776283}
-  - component: {fileID: 278634151624104701}
-  - component: {fileID: 6041010185914355487}
+  - component: {fileID: 1831662303388265295}
+  - component: {fileID: 3029634873663627833}
+  - component: {fileID: 7533029572749563953}
   m_Layer: 0
-  m_Name: FlagGet
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4037126044252776283
+--- !u!4 &1831662303388265295
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126710667875635495}
+  m_GameObject: {fileID: 803220644476281535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5951762, y: -1.1625595, z: -0.35198128}
+  m_LocalPosition: {x: 7.9283605, y: -0.7494358, z: 0.34671724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &278634151624104701
+--- !u!114 &3029634873663627833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803220644476281535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f772a01e5f5014ba5c5a8f209d7c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneFadeAnimator: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  hudManager: {fileID: 0}
+  checkpointsParent: {fileID: 0}
+  collectiblesParent: {fileID: 0}
+  player: {fileID: 0}
+  movingSpikes: {fileID: 0}
+  stageSong: {fileID: 8300000, guid: eb9a6a4f082faf24ca7699bd5700cd74, type: 3}
+  levelEndSong: {fileID: 8300000, guid: 8fb587ccb632ded479ea03039cb516bc, type: 3}
+  normalVolume: 1
+  pausedVolume: 0.5
+--- !u!82 &7533029572749563953
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126710667875635495}
+  m_GameObject: {fileID: 803220644476281535}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6237340119654497625, guid: dd0766d3d453cc84a81f74d45c231171, type: 2}
-  m_audioClip: {fileID: 8300000, guid: cf4da5988617d0148b3379a47016282a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.289
+  OutputAudioMixerGroup: {fileID: -3392220003463771723, guid: dd0766d3d453cc84a81f74d45c231171, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8fb587ccb632ded479ea03039cb516bc, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -129,16 +152,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6041010185914355487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126710667875635495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37a2e37e15d78cb4185e9a5327edbde2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loopingSound: 0
