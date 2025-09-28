@@ -192,7 +192,7 @@ public class BushEnemy : BaseEnemy
         //Chase after player
         if (playerDetected)
         {
-            if(!hurt) MoveTowardsPlayer();
+            if (!hurt) MoveTowardsPlayer();
         }
         else
         {

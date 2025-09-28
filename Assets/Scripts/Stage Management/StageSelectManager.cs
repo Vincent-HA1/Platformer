@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StageSelectManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class StageSelectManager : MonoBehaviour
     [SerializeField] GameObject bigCoinIndicatorPrefab;
     [SerializeField] GameObject bigCoinsParent;
     [SerializeField] TMPro.TextMeshProUGUI stageNameText;
+    [SerializeField] Image holdOutline;
 
     [Header("Player Character Attributes")]
     [SerializeField] float moveSpeed;
@@ -66,6 +68,7 @@ public class StageSelectManager : MonoBehaviour
     {
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
         loadingScene = false;
+        exitTimer = exitTime;
     }
 
 
@@ -77,17 +80,22 @@ public class StageSelectManager : MonoBehaviour
         UpdateAnims();
         MoveToWaypoint();
         CheckToLoadStage();
-        if (inputHandler.jumpPressed)
+        if (inputHandler.cancelPressed)
         {
             exitTimer = exitTime;
         }
-        if(inputHandler.jumpHeld)
+        if (inputHandler.cancelHeld)
         {
             exitTimer -= Time.deltaTime;
+            holdOutline.fillAmount = (exitTime - exitTimer) / exitTime;
             if (exitTimer <= 0 && !loadingScene)
             {
                 StartCoroutine(QuitToTitle());
             }
+        }
+        else
+        {
+            holdOutline.fillAmount = 0;
         }
     }
 
@@ -99,7 +107,7 @@ public class StageSelectManager : MonoBehaviour
         {
             Vector2 newInput = new Vector2(inputHandler.movement.x, 0f);
             //If the vector has changed, assign it. This prevents holding a direction (so the player has to do presses to move)
-            if(newInput != lastDirection)
+            if (newInput != lastDirection)
             {
                 print(newInput);
                 print(movementInput);
@@ -122,7 +130,7 @@ public class StageSelectManager : MonoBehaviour
     {
         if (moving)
         {
-            if(moveLerp < 1)
+            if (moveLerp < 1)
             {
                 //move with the lerp
                 playerCharacter.transform.position = Vector3.Lerp(startPoint, destination, moveLerp);
@@ -144,7 +152,7 @@ public class StageSelectManager : MonoBehaviour
 
                 //Calculate next destination (i.e. next waypoint to move to)
                 int nextWaypointIndex = currentWaypoint + (int)movementInput.x;
-                if(nextWaypointIndex >= 0 && nextWaypointIndex < stageWaypoints.Count)
+                if (nextWaypointIndex >= 0 && nextWaypointIndex < stageWaypoints.Count)
                 {
                     moving = true;
                     moveLerp = 0;
@@ -169,7 +177,7 @@ public class StageSelectManager : MonoBehaviour
         {
             Destroy(indicator.gameObject);
         }
-        for(int i = 0; i< currentStage.GetNumberOfBigCoins(); i++)
+        for (int i = 0; i < currentStage.GetNumberOfBigCoins(); i++)
         {
             //instantiate all the big coins
             GameObject bigCoin = Instantiate(bigCoinIndicatorPrefab, bigCoinsParent.transform);
@@ -189,7 +197,7 @@ public class StageSelectManager : MonoBehaviour
     bool loadingScene = false;
     void CheckToLoadStage()
     {
-        if (inputHandler.attackPressed && !moving)
+        if (inputHandler.confirmPressed && !moving)
         {
             loadingScene = true;
             StartCoroutine(LoadStage());

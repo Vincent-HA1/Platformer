@@ -11,31 +11,43 @@ public class InputHandler : MonoBehaviour
     public bool specialPressed;// { get; private set; }
     public bool pausePressed;
 
+    [Header("UI Input Bools")]
+    public bool confirmPressed = false;
+    public bool cancelPressed = false;
+    public bool cancelHeld = false;
 
 
+    public void OnEnable()
+    {
+        //If already initialised, renable
+        if(playerActions != null)
+        {
+            playerActions.Enable();
+        }
+    }
 
-    PlayerActions playerActions;
+    public void OnDisable()
+    {
+        playerActions.Disable();
+    }
+
+    public PlayerActions playerActions;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        playerActions = new PlayerActions();
+        PlayerInputScript playerInput = FindObjectOfType<PlayerInputScript>();
+        playerActions = playerInput == null ? new PlayerActions() : playerInput.actions;
         playerActions.Movement.Move.performed += ctx => StoreMoveInput(ctx.ReadValue<Vector2>());
         playerActions.Movement.Jump.performed += OnJumpPerformed;
         playerActions.Movement.Jump.canceled += OnJumpCanceled;
         playerActions.Movement.Attack.performed += OnAttack;
-        playerActions.Movement.SpecialAttack.performed += OnSpecial;
+        playerActions.Movement.Dash.performed += OnSpecial;
         playerActions.Movement.Pause.performed += OnPause;
-    }
-
-    private void OnEnable()
-    {
+        playerActions.UI.Confirm.performed += OnConfirm;
+        playerActions.UI.Back.performed += OnCancel;
+        playerActions.UI.Back.canceled += OnCancelCancelled;
         playerActions.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerActions.Disable();
     }
 
     void StoreMoveInput(Vector2 dir)
@@ -49,6 +61,7 @@ public class InputHandler : MonoBehaviour
         // Button went down
         jumpPressed = true;
         jumpHeld = true;
+        print("jump");
     }
 
     void OnJumpCanceled(InputAction.CallbackContext ctx)
@@ -78,13 +91,39 @@ public class InputHandler : MonoBehaviour
         pausePressed = true;
     }
 
+    void OnConfirm(InputAction.CallbackContext ctx)
+    {
+        // Button was released (if you care)
+        confirmPressed = true;
+    }
+
+    void OnCancel(InputAction.CallbackContext ctx)
+    {
+        // Button was released (if you care)
+        cancelPressed = true;
+        cancelHeld = true;
+    }
+
+    void OnCancelCancelled(InputAction.CallbackContext ctx)
+    {
+        // Button was released (if you care)
+        cancelHeld = false;
+    }
+
     // Update is called once per frame
     void LateUpdate()
+    {
+        ResetAllBools();
+    }
+
+    public void ResetAllBools()
     {
         jumpPressed = false; //Like a real button, this bool is only true on the frame the button is pressed. So we know when it started
         attackPressed = false;
         specialPressed = false;
         pausePressed = false;
+        confirmPressed = false;
+        cancelPressed = false;
     }
 
 

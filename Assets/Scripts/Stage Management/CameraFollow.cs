@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//THIS SCRIPT IS NO LONGER USED. CINEMACHINE IS BEING USED INSTEAD
 public class CameraFollow : MonoBehaviour
 {
 
@@ -38,8 +39,6 @@ public class CameraFollow : MonoBehaviour
             float deltaY = panSpeed * panDirection * Time.deltaTime;
             deltaY = Mathf.Clamp(deltaY, -difference, difference); //Clamping so it never moves more than the y difference (i.e. beyond the ratio)
             float newYPos = Mathf.Clamp(transform.position.y + deltaY, minY, maxY);//Clamp to min and max y
-            //float newYPos = Mathf.Clamp(playerTarget.position.y, minY, maxY);
-            //print(newYPos);
             transform.position = new Vector3(playerTarget.position.x, newYPos, transform.position.z);
 
         }

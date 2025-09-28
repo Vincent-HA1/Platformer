@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f429aaf5321b00d4e90ee0a2f32786c6, type: 3}
+  m_Name: ControlIconDatabase
+  m_EditorClassIdentifier: 
+  entries:
+  - controlPath: <Keyboard>/space
+    label: <Keyboard>/space
+    icon: {fileID: 545855583, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/enter
+    label: <Keyboard>/enter
+    icon: {fileID: 7385725, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/tab
+    label: <Keyboard>/tab
+    icon: {fileID: 1142251963, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/semicolon
+    label: <Keyboard>/semicolon
+    icon: {fileID: 1992340565, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/comma
+    label: <Keyboard>/comma
+    icon: {fileID: -399525549, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/period
+    label: <Keyboard>/period
+    icon: {fileID: 52791154, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/slash
+    label: <Keyboard>/slash
+    icon: {fileID: 1975795352, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/backslash
+    label: <Keyboard>/backslash
+    icon: {fileID: 2003771794, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/equals
+    label: <Keyboard>/equals
+    icon: {fileID: 1674981498, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/a
+    label: <Keyboard>/a
+    icon: {fileID: -1075122474, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/b
+    label: <Keyboard>/b
+    icon: {fileID: 1902174685, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/c
+    label: <Keyboard>/c
+    icon: {fileID: 1774437107, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/d
+    label: <Keyboard>/d
+    icon: {fileID: -775364240, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/e
+    label: <Keyboard>/e
+    icon: {fileID: -381760244, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/f
+    label: <Keyboard>/f
+    icon: {fileID: -1432695806, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/g
+    label: <Keyboard>/g
+    icon: {fileID: -1756252575, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/h
+    label: <Keyboard>/h
+    icon: {fileID: 547211663, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/i
+    label: <Keyboard>/i
+    icon: {fileID: 829271854, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/j
+    label: <Keyboard>/j
+    icon: {fileID: 1911022144, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/k
+    label: <Keyboard>/k
+    icon: {fileID: -1432833320, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/l
+    label: <Keyboard>/l
+    icon: {fileID: -1841019775, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/m
+    label: <Keyboard>/m
+    icon: {fileID: 726259259, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/n
+    label: <Keyboard>/n
+    icon: {fileID: 1280153751, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/o
+    label: <Keyboard>/o
+    icon: {fileID: -1715858034, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/p
+    label: <Keyboard>/p
+    icon: {fileID: 935075325, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/q
+    label: <Keyboard>/q
+    icon: {fileID: 1105559263, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/r
+    label: <Keyboard>/r
+    icon: {fileID: 425894404, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/s
+    label: <Keyboard>/s
+    icon: {fileID: 64550043, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/t
+    label: <Keyboard>/t
+    icon: {fileID: -690445827, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/u
+    label: <Keyboard>/u
+    icon: {fileID: -1606615803, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/v
+    label: <Keyboard>/v
+    icon: {fileID: 1927881969, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/w
+    label: <Keyboard>/w
+    icon: {fileID: 344251461, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/x
+    label: <Keyboard>/x
+    icon: {fileID: -753530159, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/y
+    label: <Keyboard>/y
+    icon: {fileID: -532768267, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/z
+    label: <Keyboard>/z
+    icon: {fileID: -1547851464, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/1
+    label: <Keyboard>/1
+    icon: {fileID: -1426369859, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/2
+    label: <Keyboard>/2
+    icon: {fileID: 920542195, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/3
+    label: <Keyboard>/3
+    icon: {fileID: 2145744811, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/4
+    label: <Keyboard>/4
+    icon: {fileID: -483787082, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/5
+    label: <Keyboard>/5
+    icon: {fileID: -711030966, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/6
+    label: <Keyboard>/6
+    icon: {fileID: -557408203, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/7
+    label: <Keyboard>/7
+    icon: {fileID: 1110413324, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/8
+    label: <Keyboard>/8
+    icon: {fileID: 919726620, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/9
+    label: <Keyboard>/9
+    icon: {fileID: 111100615, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/0
+    label: <Keyboard>/0
+    icon: {fileID: 1932961221, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/minus
+    label: <Keyboard>/minus
+    icon: {fileID: 1506673617, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/leftshift
+    label: <Keyboard>/leftshift
+    icon: {fileID: 83220418, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/rightshift
+    label: <Keyboard>/rightshift
+    icon: {fileID: 1831347019, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/leftalt
+    label: <Keyboard>/leftalt
+    icon: {fileID: 407915522, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/leftctrl
+    label: <Keyboard>/leftctrl
+    icon: {fileID: -269063972, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/rightctrl
+    label: <Keyboard>/rightctrl
+    icon: {fileID: -269063972, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/backspace
+    label: <Keyboard>/backspace
+    icon: {fileID: -1096626930, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/leftbracket
+    label: <Keyboard>/leftbracket
+    icon: {fileID: -1479788025, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/rightbracket
+    label: <Keyboard>/rightbracket
+    icon: {fileID: -1544595051, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Keyboard>/quote
+    label: <Keyboard>/quote
+    icon: {fileID: 1006344426, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/buttonSouth
+    label: <Gamepad>/buttonSouth
+    icon: {fileID: 175487498, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/buttonEast
+    label: <Gamepad>/buttonEast
+    icon: {fileID: 1719245625, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/buttonNorth
+    label: <Gamepad>/buttonNorth
+    icon: {fileID: 1791909896, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/buttonWest
+    label: <Gamepad>/buttonWest
+    icon: {fileID: 1612109862, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/leftShoulder
+    label: <Gamepad>/leftShoulder
+    icon: {fileID: 1917341916, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/rightShoulder
+    label: <Gamepad>/rightShoulder
+    icon: {fileID: 110893434, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/leftTrigger
+    label: <Gamepad>/leftTrigger
+    icon: {fileID: 569985374, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/rightTrigger
+    label: <Gamepad>/rightTrigger
+    icon: {fileID: -1965804871, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/start
+    label: <Gamepad>/start
+    icon: {fileID: -876986011, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/select
+    label: <Gamepad>/select
+    icon: {fileID: -2040917421, guid: e5e519282b3041f4a8f8ddf82ba667dc, type: 3}
+  - controlPath: <Gamepad>/leftStickPress
+    label: <Gamepad>/leftStickPress
+    icon: {fileID: -391075207, guid: c1c899a9272bd0f43a62ad5425820b9d, type: 3}
+  - controlPath: <Gamepad>/rightStickPress
+    label: <Gamepad>/rightStickPress
+    icon: {fileID: 589167760, guid: c1c899a9272bd0f43a62ad5425820b9d, type: 3}

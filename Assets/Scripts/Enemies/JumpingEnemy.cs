@@ -75,7 +75,7 @@ public class JumpingEnemy : BaseEnemy
 
             }
             //Check if wall now in between player and the enemy. If so, have to cancel the chase, regardless of distance
-            else if(wallPlayerCheck.collider != null && wallDistance < playerDistance)
+            else if (wallPlayerCheck.collider != null && wallDistance < playerDistance)
             {
                 //Stop moving for now
                 if (playerDetected)
@@ -111,7 +111,7 @@ public class JumpingEnemy : BaseEnemy
     }
     void ManageJumpTimer()
     {
-        if(!canJump || hurt) return; //only some enemies can jump
+        if (!canJump || hurt) return; //only some enemies can jump
         if (onGround && verticalVelocity < 0)
         {
             jumping = false;
@@ -119,7 +119,7 @@ public class JumpingEnemy : BaseEnemy
         if (playerDetected)
         {
             //add jump timer stuff
-            if(jumpTimer <= 0 && !jumping)
+            if (jumpTimer <= 0 && !jumping)
             {
                 //Set timer. If this is the start, then don't jump immediately
                 jumpTimer = Random.Range(minJumpTime, maxJumpTime);
@@ -221,7 +221,7 @@ public class JumpingEnemy : BaseEnemy
     bool CanMove()
     {
         //Returns the conditions for not being able to move
-        return (onGround||jumping) && !wallThere && !hitOtherEnemy;
+        return (onGround || jumping) && !wallThere && !hitOtherEnemy;
 
     }
     void ApplyMovement()
@@ -234,7 +234,7 @@ public class JumpingEnemy : BaseEnemy
         float dy = !jumping ? 0 : verticalVelocity * Time.fixedDeltaTime + 0.5f * gravityForce * Time.fixedDeltaTime * Time.fixedDeltaTime;
 
         // Update vertical velocity (SUVAT), assuming initial velocity is 0. If on the ground, velocity is automatically 0
-        verticalVelocity = !jumping ? 0: Mathf.Max(terminalNegativeVelocity, verticalVelocity + gravityForce * Time.fixedDeltaTime);
+        verticalVelocity = !jumping ? 0 : Mathf.Max(terminalNegativeVelocity, verticalVelocity + gravityForce * Time.fixedDeltaTime);
 
         Vector2 finalMovement = new Vector2(dx, dy);
 
@@ -250,5 +250,5 @@ public class JumpingEnemy : BaseEnemy
         moveDirection = Vector2.zero;
     }
 
-    
+
 }

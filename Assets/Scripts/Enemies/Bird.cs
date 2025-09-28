@@ -23,7 +23,7 @@ public class Bird : BaseEnemy
         if (playerCollider != null)
         {
             player = playerCollider.transform;
-            if(!playerDetected)
+            if (!playerDetected)
             {
                 playerDetected = true;
                 moving = true;

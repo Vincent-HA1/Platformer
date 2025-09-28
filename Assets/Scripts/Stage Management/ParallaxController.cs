@@ -11,9 +11,9 @@ public class ParallaxController : MonoBehaviour
     void Start()
     {
         startpos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x; 
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
-    
+
     private void LateUpdate()
     {
         float temp = (cam.transform.position.x * (1 - parallaxEffect));

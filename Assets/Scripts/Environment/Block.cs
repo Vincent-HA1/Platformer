@@ -35,7 +35,7 @@ public class Block : MonoBehaviour
     {
         //Get hit, play the animation
         health -= 1;
-        if(health <= maxHealth / 2)
+        if (health <= maxHealth / 2)
         {
             //At half health, show the damaged animation.
             anim.SetBool("Damaged", true);

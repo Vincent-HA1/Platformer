@@ -44,7 +44,7 @@ public class Fish : BaseEnemy
         if (returningToStartPoint)
         {
             //Move to start point until you get there
-            if(Vector2.Distance(startPoint, transform.position) <= 0.1f)
+            if (Vector2.Distance(startPoint, transform.position) <= 0.1f)
             {
                 //If close enough, stop
                 returningToStartPoint = false;
@@ -57,7 +57,7 @@ public class Fish : BaseEnemy
                 MoveTowardsTarget(startPoint);
             }
         }
-        else if(playerDetected)
+        else if (playerDetected)
         {
             if (!CanSwim())
             {

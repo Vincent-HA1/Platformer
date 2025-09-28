@@ -72,7 +72,7 @@ public class MovingPlatform : MonoBehaviour
             currentStartPos = currentEndPos;
             currentEndPos = temp;
             lerp = 0;
-            if(playerMovement) playerMovement.SetPlatformDelta(Vector2.zero);
+            if (playerMovement) playerMovement.SetPlatformDelta(Vector2.zero);
             StartCoroutine(WaitAtPosition());
         }
     }

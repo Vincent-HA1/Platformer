@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Stage select waypoint
 public class StageWaypoint : MonoBehaviour
 {
     [Header("References")]

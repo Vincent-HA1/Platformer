@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 8
   waterLayer:
     serializedVersion: 2
     m_Bits: 16
@@ -427,6 +427,8 @@ MonoBehaviour:
   attackPressed: 0
   specialPressed: 0
   pausePressed: 0
+  confirmPressed: 0
+  cancelPressed: 0
 --- !u!1 &4107398126005622651
 GameObject:
   m_ObjectHideFlags: 0

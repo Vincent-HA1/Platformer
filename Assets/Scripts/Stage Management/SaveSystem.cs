@@ -13,13 +13,13 @@ public static class SaveSystem
     {
         SaveData data = Load();
         //If there are no stages saved, initialise the list of saves
-        if(data == null)
+        if (data == null)
         {
             data = new SaveData(new List<StageSave>());
         }
         //add the stage save
         int listIndex = data.stagesSaved.FindIndex(s => s.stageName == stageSave.stageName);
-        if(listIndex != -1)
+        if (listIndex != -1)
         {
             //If the stage save is already there, then overwrite it.
             data.stagesSaved[listIndex] = stageSave;

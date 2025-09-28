@@ -200,7 +200,7 @@ public class LevelManager : MonoBehaviour
         sceneFadeAnimator.SetTrigger("FadeOut");
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
-        SceneManager.LoadScene("StageSelect"); 
+        SceneManager.LoadScene("StageSelect");
     }
 
     void QuitLevel()

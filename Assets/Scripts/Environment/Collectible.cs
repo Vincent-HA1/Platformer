@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    [Header("Attributes")]
+    [SerializeField] CollectibleType collectibleType;
+
     public enum CollectibleType
     {
         BigCoin,
@@ -11,8 +14,6 @@ public class Collectible : MonoBehaviour
     }
     public Action PickedUp;
 
-    [Header("Attributes")]
-    [SerializeField] CollectibleType collectibleType;
 
     public CollectibleType GetCollectibleType()
     {
@@ -27,6 +28,7 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Collect when player collides 
         if (collision.CompareTag("Player"))
         {
             Collect();
