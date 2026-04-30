@@ -8,10 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public Action<float> Hit;
     public Action Death;
     public Action Jump;
+    public Action OpenParachute;
     public Action Bounce;
+    public Action PunchAction;
     public Action KickAction;
     public LayerMask groundLayer;
     public LayerMask waterLayer;
+    public LayerMask iceLayer;
 
     public float MaxHealth
     {
@@ -43,12 +46,13 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Player Movement Attributes")]
     [SerializeField] float groundMoveSpeed = 6;
-    [SerializeField] float superSpringMoveSpeed = 12;
+    [SerializeField] float iceTurnAcceleration = 5;
     [SerializeField] float maxAirAccelerationChangeRate = 5;
     [SerializeField] float jumpForce = 8.5f;
     [SerializeField] float extraJumpForce = 0.38f;
     [SerializeField] float gravityForce = -35;
     [SerializeField] float terminalNegativeVelocity = -45;
+    [SerializeField] float platformBonkVelocityHit = 0.05f;
     [SerializeField] float maxVerticalVelocity = 15;
     [SerializeField] float jumpBufferTime = 0.15f;
     [SerializeField] float coyoteTime = 0.08f;
@@ -80,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Player Spring Attributes")]
     [SerializeField] float springXModifier = 0.05f;
+    [Tooltip("Percentage falloff per second")]
+    [SerializeField] float additiveForceFalloff = 0.3f;
 
 
     // Player Components
@@ -90,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D boxCollider;
 
     //Platform Handling
-    MovingPlatform platformToFollow;
+    PlatformToFollow platformToFollow;
 
     // Input & movement state
     Vector2 movementInput;
@@ -119,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
     float invincibilityTimer = 0;
 
     Vector2 additiveForce;
+    float additiveForcePercentage;
 
     // State flags
     public bool onGround { get; private set; } = false;
@@ -147,6 +154,9 @@ public class PlayerMovement : MonoBehaviour
     //Swimming
     bool inWater = false;
     bool waterAbove = false;
+
+    //Ice
+    bool onIce = false;
 
     bool blockHorizontalMovement = false;
     float health;
@@ -223,12 +233,14 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckForSurfaces()
     {
-        Vector3 offset = platformToFollow == null ? Vector2.zero : new Vector2(0, -0.1f);
-        bool left = Physics2D.OverlapBox(leftFootPoint.position + offset, footSize, 0, groundLayer);
-        bool right = Physics2D.OverlapBox(rightFootPoint.position + offset, footSize, 0, groundLayer);
+        //Vector3 offset = platformToFollow == null ? Vector2.zero : new Vector2(0, -0.1f);
+        //bool left = Physics2D.OverlapBox(leftFootPoint.position + offset, footSize, 0, groundLayer);
+        //bool right = Physics2D.OverlapBox(rightFootPoint.position + offset, footSize, 0, groundLayer);
         bool leftGlideCheck = Physics2D.OverlapBox((Vector2)leftFootPoint.position - new Vector2(0, 0.3f), glideCheckSize, 0, groundLayer);
         bool rightGlideCheck = Physics2D.OverlapBox((Vector2)rightFootPoint.position - new Vector2(0, 0.3f), glideCheckSize, 0, groundLayer);
-        onGround = left || right;
+        onGround = CheckForSpecificGroundLayer(groundLayer, footSize);
+        //If on ice, make the check larger so there is no sudden switch to on ground. If not, keep it as normal onGround check
+        onIce = CheckForSpecificGroundLayer(iceLayer, onIce? footSize + new Vector2(0.3f, 0) : footSize);
         //test
         //ignoreOnGround = platformToFollow != null;
         //onGround = ignoreOnGround ? true : onGround;
@@ -254,6 +266,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    bool CheckForSpecificGroundLayer(LayerMask layerToCheck, Vector2 boxSize)
+    {
+        Vector3 offset = platformToFollow == null ? Vector2.zero : new Vector2(0, -0.1f);
+        bool left = Physics2D.OverlapBox(leftFootPoint.position + offset, boxSize, 0, layerToCheck);
+        bool right = Physics2D.OverlapBox(rightFootPoint.position + offset, boxSize, 0, layerToCheck);
+        return left || right;
+    }
+
     void UpdateCoyoteBuffer()
     {
         // Start coyote time when leaving ground
@@ -273,7 +293,9 @@ public class PlayerMovement : MonoBehaviour
     {
         // Detect jump press and release
         if (isJumping && !inputHandler.jumpHeld)
+        {
             stoppedHoldingJump = true;
+        }
 
         //If the buffer has ended, stop storing the input
         if (jumpBuffer <= 0f)
@@ -307,7 +329,7 @@ public class PlayerMovement : MonoBehaviour
         if (storingJumpInput && (((onGround || coyoteBuffer > 0f) && !isJumping) || inWater))
         {
             PerformJump();
-            if (!canKick)
+            if (!canKick && !inWater) //only renable kicking when jumping from ground to air
             {
                 canKick = true;
                 ShowFlash();
@@ -323,16 +345,18 @@ public class PlayerMovement : MonoBehaviour
         if (stoppedHoldingJump || (!isJumping && !onGround))//isJumping && stoppedHoldingJump)
         {
             //Can only glide when falling (to prevent weird rising glide shennanigans)
-            if (!gliding && canGlide && verticalVelocity <= 0)
+            if (!gliding && canGlide && verticalVelocity <= 0 && !inWater)
             {
                 gliding = inputHandler.jumpHeld && !onGround;
+                if (gliding) OpenParachute?.Invoke();
             }
             else if (gliding)
             {
-                gliding = inputHandler.jumpHeld && !onGround;
+                //gliding = inputHandler.jumpHeld && !onGround;
             }
             if (gliding)
             {
+                gliding = inputHandler.jumpHeld && !onGround;
                 storingJumpInput = false;
             }
         }
@@ -348,6 +372,7 @@ public class PlayerMovement : MonoBehaviour
         if (playSFX) Jump?.Invoke();
         //if jump with full force is true, just do the jump regardless of where the player is
         verticalVelocity = inWater && !jumpWithFullForce ? swimBobForce : jumpForce;
+        if(inWater) stoppedHoldingJump = false; //Because in water, you are bobbing, so you don't land, meaning this doesn't turn false
         isJumping = true;
         storingJumpInput = false;
         //make sure gliding has stopped
@@ -366,6 +391,7 @@ public class PlayerMovement : MonoBehaviour
         //If not attacking, start the attack
         if (!attacking)
         {
+            PunchAction?.Invoke();
             attacking = true;
             attackFinished = false;
         }
@@ -374,6 +400,7 @@ public class PlayerMovement : MonoBehaviour
             // If the window to start another attack is still open, and the previous attack has finished
             if (attackBuffer > 0 && attackFinished)
             {
+                PunchAction?.Invoke();
                 //Attack again
                 anim.SetTrigger("Attack");
                 attackFinished = false;
@@ -554,11 +581,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //set all states to false when in water
         inWater = true;
-        print(verticalVelocity);
         verticalVelocity = verticalVelocity /= 2;
-        print(verticalVelocity);
         //if(verticalVelocity > 0) verticalVelocity /= 2; //halve velocity
         ResetStates(false);
+        //kickTimer = 0; //Don't make the kick timer delay upon hitting the water
     }
 
     void GetOutOfWater()
@@ -659,7 +685,7 @@ public class PlayerMovement : MonoBehaviour
         movementInput = Vector2.zero;
         if (resetVelocity) verticalVelocity = 0;
         attacking = false;
-        StopKick();
+        if(!inWater || kicking) StopKick();
     }
 
     // ----------------------------------------
@@ -716,15 +742,64 @@ public class PlayerMovement : MonoBehaviour
         float gravityValue = inWater ? waterGravityForce : gravityForce;
         float maximumNegativeVelocity = inWater ? terminalWaterNegativeVelocity : (gliding ? glideNegativeVelocity : terminalNegativeVelocity);
 
-
-        // Horizontal velocity is directly from xMovement. If kicking, then move forwards according to the kick speed
-        horizontalVelocity = !kicking ? moveSpeed * xMovement : horizontalVelocity;// * anim.GetFloat("Horizontal");//kickMovementSpeed * anim.GetFloat("Horizontal");
-        horizontalVelocity = inKickLag ? 0 : horizontalVelocity;
+        // Ice movement
+        if(onIce && !kicking)
+        {
+            float directionOfIceAcceleration; //direction of acceleration
+            bool skidding = false; //If the player has stopped moving, acceleration should go in the opposite way of travel
+            if(xMovement == 0)
+            {
+                directionOfIceAcceleration = -Mathf.Sign(horizontalVelocity); //so decelerate in the other direction
+                skidding = true;
+            }
+            else
+            {
+                directionOfIceAcceleration = xMovement;
+            }
+            if (directionOfIceAcceleration <= 0)
+            {
+                //So if moving left 
+                print("moving left");
+                if (skidding)
+                {
+                    //If skidding, come to a stop (i.e. set max velocity to 0)
+                    horizontalVelocity = Mathf.Max(0, horizontalVelocity + iceTurnAcceleration * directionOfIceAcceleration * Time.fixedDeltaTime);
+                }
+                else
+                {
+                    //Otherwise, move towards that direction (up to max movement speed)
+                    horizontalVelocity = Mathf.Max(directionOfIceAcceleration * moveSpeed, horizontalVelocity + iceTurnAcceleration * directionOfIceAcceleration * Time.fixedDeltaTime);
+                }
+            }
+            else
+            {
+                print("moving right");
+                //So if moving right
+                if (skidding)
+                {
+                    //If skidding, come to a stop
+                    horizontalVelocity = Mathf.Min(0, horizontalVelocity + iceTurnAcceleration * directionOfIceAcceleration * Time.fixedDeltaTime);
+                }
+                else
+                {
+                    //Otherwise, move towards that direction (up to max movement speed)
+                    horizontalVelocity = Mathf.Min(directionOfIceAcceleration * moveSpeed, horizontalVelocity + iceTurnAcceleration * directionOfIceAcceleration * Time.fixedDeltaTime);
+                }
+            }
+        }
+        else
+        {
+            // Horizontal velocity is directly from xMovement (unless on ice). If kicking, then move forwards according to the kick speed
+            horizontalVelocity = !kicking ? moveSpeed * xMovement : horizontalVelocity;
+            horizontalVelocity = inKickLag ? 0 : horizontalVelocity;
+        }
 
         // Compute displacements (SUVAT)
-        float dx = !kicking ?
-            horizontalVelocity * Time.fixedDeltaTime : //no acceleration for ground except for when changing direction, which is handled above
-            horizontalVelocity * Time.fixedDeltaTime;// + 0.5f * anim.GetFloat("Horizontal") * kickSlowdownRate * Time.fixedDeltaTime * Time.fixedDeltaTime; 
+        // If on ice, accelerate into chosen direction
+        float dx = onIce?
+            horizontalVelocity * Time.fixedDeltaTime + 0.5f * iceTurnAcceleration * xMovement * Time.fixedDeltaTime * Time.fixedDeltaTime:
+            horizontalVelocity * Time.fixedDeltaTime;
+
 
         //Don't move downwards if on the ground or kicking
         bool groundedAndNotRisingOrKicking = (verticalVelocity <= 0f && onGround) || kicking;
@@ -755,7 +830,9 @@ public class PlayerMovement : MonoBehaviour
             finalMovement += platformDelta;
         }
 
-        finalMovement += additiveForce; //add any additional force.
+        //Additive force falloff
+        additiveForcePercentage = Mathf.Max(0, additiveForcePercentage - Time.deltaTime * additiveForceFalloff);
+        finalMovement += additiveForce * additiveForcePercentage; //add any additional force.
 
         // Apply movement to Rigidbody2D
         rigid.MovePosition(rigid.position + finalMovement);
@@ -819,18 +896,15 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.CompareTag("MovingPlatform") && platformToFollow == null && onGround)
         {
+            print("Touch moving platform");
             //Set the moving platform
-            platformToFollow = collision.GetComponentInParent<MovingPlatform>();
+            platformToFollow = collision.GetComponentInParent<PlatformToFollow>();
             platformToFollow.SetPlayer(this);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //if (collision.CompareTag("Water") && inWater)
-        //{
-        //    GetOutOfWater();
-        //}
         if (collision.CompareTag("MovingPlatform") && platformToFollow)
         {
             ExitPlatform();
@@ -860,6 +934,7 @@ public class PlayerMovement : MonoBehaviour
             PerformJump(true, false);
             jumpForce = temp;
             additiveForce = new Vector2(currentHorizontalDir, 0) * springXModifier; //Add this onto the player's movement as a result of touching this spring
+            additiveForcePercentage = 1;
             stoppedHoldingJump = false;
         }
     }
@@ -877,16 +952,39 @@ public class PlayerMovement : MonoBehaviour
         ContactPoint2D contact = collision.GetContact(0);
         const float threshold = 0.5f;
         Vector2 normal = contact.normal; // points from the other collider -> this collider
-        if (normal.y > threshold)
+        if (normal.y > 0) //For standing on top of objects, there is no threshold
         {
             // landed on top of the object (ground under us)
             Debug.Log("Collision from above (landed on top of object).");
+
+            ////Check if this is ice
+            //if (onGround && collision.gameObject.CompareTag("Ice"))
+            //{
+            //    if (!onIce)
+            //    {
+            //        print("on ice");
+            //        //On ice = true
+            //        //if (!onIce) horizontalVelocity = 0;
+            //        onIce = true;
+            //    }
+
+            //}
+            //else
+            //{
+            //    onIce = false;
+            //}
         }
-        else if (normal.y < -threshold)
+        else if (normal.y < -threshold) //For bumping head on objects
         {
-            // hit underside (head bump, so stop velocity)
+            // hit underside (head bump, so stop the rising input)
             Debug.Log("Collision from below (hit head).");
             inputHandler.jumpHeld = false;
+            if(verticalVelocity > 0)
+            {
+                //Make the player lose velocity somewhat (don't want to float under the platform)
+                verticalVelocity -= maxVerticalVelocity * platformBonkVelocityHit;
+            }
+            //verticalVelocity = 0;
         }
 
     }

@@ -42,6 +42,7 @@ public class BaseEnemy : MonoBehaviour
     protected bool playerTooFar = false;
     protected Rigidbody2D rigid;
     protected Animator anim;
+    protected BoxCollider2D boxCollider;
 
     private float hurtTimer;
     private float health;
@@ -53,7 +54,8 @@ public class BaseEnemy : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
-        //randomly decide start direcction
+        boxCollider = GetComponent<BoxCollider2D>();   
+        //randomly decide start direction
         moveDirection = new Vector2(UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1, 0);
     }
 
@@ -73,10 +75,15 @@ public class BaseEnemy : MonoBehaviour
             hurtTimer -= Time.deltaTime;
             if (hurtTimer <= 0)
             {
-                hurt = false;
+                ResumeFromGettingHit();
             }
         }
 
+    }
+
+    protected virtual void ResumeFromGettingHit()
+    {
+        hurt = false;
     }
 
     protected virtual void ManageMoveTimers()
@@ -118,13 +125,14 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void UpdateAnims()
     {
-        spriteRenderer.flipX = moveDirection.x >= 0;
+        spriteRenderer.flipX = !hurt ? moveDirection.x >= 0 : spriteRenderer.flipX; //Only update when the enemy is not hurt (shouldn't be flipping in the hurt animation)
         anim.SetFloat("Speed", moving ? 1 : 0);
         anim.SetBool("Hurt", hurt);
     }
 
     protected virtual void DetectPlayer()
     {
+        //if (ignorePlayer) return;
         //Detect distance to player (to stop chasing if player has gotten too far away)
         if (!player || Vector2.Distance(player.position, transform.position) > maxDistanceToPlayer)
         {

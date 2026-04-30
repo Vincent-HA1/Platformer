@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class MovingPlatform : PlatformToFollow
 {
     [Header("References")]
     [SerializeField] Transform startPoint;
@@ -14,7 +14,6 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] int maxWaitTime = 3;
 
     Rigidbody2D rigid;
-    PlayerMovement playerMovement;
     Vector2 currentStartPos;
     Vector2 currentEndPos;
 
@@ -22,17 +21,6 @@ public class MovingPlatform : MonoBehaviour
     float lerp = 0;
 
     bool waiting = false;
-
-    public void SetPlayer(PlayerMovement playerMovement)
-    {
-        this.playerMovement = playerMovement;
-    }
-
-    public void Disengage()
-    {
-        //Make the player get off the platform
-        playerMovement = null;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -59,10 +47,12 @@ public class MovingPlatform : MonoBehaviour
             Vector2 newPos = Vector3.Lerp(currentStartPos, currentEndPos, lerp);
             Vector2 difference = newPos - lastPos; //calculate the difference so can move the player along with it
             rigid.MovePosition(newPos);
-            if (playerMovement)
-            {
-                playerMovement.SetPlatformDelta(difference);
-            }
+            //if (playerMovement)
+            //{
+            //    SetPlatformDelta(difference);
+            //    //playerMovement.SetPlatformDelta(difference);
+            //}
+            SetPlatformDelta(difference);
             lastPos = newPos;
         }
         else
@@ -72,7 +62,7 @@ public class MovingPlatform : MonoBehaviour
             currentStartPos = currentEndPos;
             currentEndPos = temp;
             lerp = 0;
-            if (playerMovement) playerMovement.SetPlatformDelta(Vector2.zero);
+            SetPlatformDelta(Vector2.zero);//playerMovement.SetPlatformDelta(Vector2.zero);
             StartCoroutine(WaitAtPosition());
         }
     }

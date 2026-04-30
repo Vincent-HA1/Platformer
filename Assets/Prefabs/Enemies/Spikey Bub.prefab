@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6114404013006554676}
   - component: {fileID: 404023448598020350}
   - component: {fileID: 1699769052993533202}
-  - component: {fileID: 2010228866877705760}
+  - component: {fileID: 7025495648197034502}
   m_Layer: 7
   m_Name: Spikey Bub
   m_TagString: Enemy
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 8635614620407084470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: -1.51, z: 0}
+  m_LocalPosition: {x: 1.3, y: -1.51, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -108,7 +108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1615396271, guid: 3d7f37cae91d5b744859fd5c904b07c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -213,7 +213,7 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &2010228866877705760
+--- !u!114 &7025495648197034502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8635614620407084470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118b62e82b892b947b58ff9d1d8ac2e1, type: 3}
+  m_Script: {fileID: 11500000, guid: f0286c6a727a67a48a81b1867984e354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerLayer:
@@ -237,11 +237,14 @@ MonoBehaviour:
   maxPatrolTime: 2
   minWaitTime: 1
   maxWaitTime: 1.25
-  detectionRadius: 3
+  detectionRadius: 2
+  maxDistanceToPlayer: 5
   chanceForFoodDrop: 0.2
+  moving: 0
+  playerDetected: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -253,6 +256,7 @@ MonoBehaviour:
   minDistanceToPlayer: 0.3
   minJumpTime: 1
   maxJumpTime: 2
+  jumpLagTime: 0.3
   jumpForce: 6
   gravityForce: -20
   terminalNegativeVelocity: -20

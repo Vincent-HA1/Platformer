@@ -213,10 +213,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   waterLayer:
     serializedVersion: 2
     m_Bits: 16
+  iceLayer:
+    serializedVersion: 2
+    m_Bits: 256
   ignoreOnGround: 0
   leftFootPoint: {fileID: 8808712159974982419}
   rightFootPoint: {fileID: 5139948883833169444}
@@ -227,12 +230,14 @@ MonoBehaviour:
   maxHealth: 3
   hitInvincibilityDuration: 1.5
   groundMoveSpeed: 7
-  superSpringMoveSpeed: 12
+  iceTurnAcceleration: 5
   maxAirAccelerationChangeRate: 3.5
-  jumpForce: 9.5
-  extraJumpForce: 0.48
-  gravityForce: -45
+  jumpForce: 12
+  extraJumpForce: 0.7
+  gravityForce: -65
   terminalNegativeVelocity: -15
+  platformBonkVelocityHit: 0.07
+  maxVerticalVelocity: 15
   jumpBufferTime: 0.12
   coyoteTime: 0.03
   glideNegativeVelocity: -2
@@ -261,10 +266,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   useAccel: 1
-  attackBufferWindow: 0.1
-  attackInputBufferWindow: 0.2
+  attackBufferWindow: 0.08
+  attackInputBufferWindow: 0.18
   kickLength: 0.32
-  kickInitialSpeed: 13
+  kickInitialSpeed: 15
   kickSlowdownRate: -45
   kickAccelCurve:
     serializedVersion: 2
@@ -316,6 +321,8 @@ MonoBehaviour:
   terminalWaterNegativeVelocity: -5
   hurtTime: 0.3
   springXModifier: 0.1
+  additiveForceFalloff: 0.5
+  onIce: 0
 --- !u!50 &3976980918622258715
 Rigidbody2D:
   serializedVersion: 4
@@ -429,6 +436,7 @@ MonoBehaviour:
   pausePressed: 0
   confirmPressed: 0
   cancelPressed: 0
+  cancelHeld: 0
 --- !u!1 &4107398126005622651
 GameObject:
   m_ObjectHideFlags: 0

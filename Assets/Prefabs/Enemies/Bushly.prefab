@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 959586211578919243}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41, y: -1.51, z: 0}
+  m_LocalPosition: {x: -0.41, y: -1.51, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -202,7 +202,7 @@ MonoBehaviour:
   foodPrefab: {fileID: 2388372431308612479, guid: 1b56d1a7df4545e4da860db84f2daa9a, type: 3}
   maxHealth: 3
   patrol: 1
-  hurtTime: 0.5
+  hurtTime: 0.6
   minPatrolTime: 1.5
   maxPatrolTime: 2
   minWaitTime: 1
@@ -210,25 +210,28 @@ MonoBehaviour:
   detectionRadius: 2
   maxDistanceToPlayer: 5
   chanceForFoodDrop: 0.2
+  moving: 0
+  playerDetected: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
   groundPos: {fileID: 6381372148216781110}
   moveSpeed: 2
   groundCheckXOffset: 0.6
-  wallCheckDistance: 0.8
+  wallCheckDistance: 0.5
   playerCheckDistance: 4
   minDistanceToPlayer: 0.3
-  maxDistanceToPlayer: 5
   minJumpTime: 1
   maxJumpTime: 2
+  jumpLagTime: 0.3
   jumpForce: 6
   gravityForce: -20
   terminalNegativeVelocity: -20
   canJump: 1
+  maxDistanceToPlayer: 5
   detectionCollider: {fileID: 6403179944977392251}
 --- !u!1 &7040809760283821183
 GameObject:

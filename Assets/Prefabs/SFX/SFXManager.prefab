@@ -52,7 +52,9 @@ MonoBehaviour:
   enemiesParent: {fileID: 0}
   blocksParent: {fileID: 0}
   jumpSound: {fileID: 505066711286351902, guid: 088321644891925418b8182132a1ee67, type: 3}
+  openParachuteSound: {fileID: 1087616076217279644, guid: 1c6fe392f638e6b40a236c0ba5e94ecb, type: 3}
   playerHitSound: {fileID: 7203002742881799541, guid: 1d9464aaebff47542aa960f2b960639c, type: 3}
+  playerPunchSound: {fileID: 8347801189894163478, guid: 9e522f965607c6b409dd9f81bcae8956, type: 3}
   playerKickSound: {fileID: 6126710667875635495, guid: c04eb9ed68b85dd4cae3d8822e485c58, type: 3}
   enemyHitSound: {fileID: 1549979658317049374, guid: fea92c4285bfdf4428b0be043cdb803b, type: 3}
   enemyDeathSound: {fileID: 7848062893853481194, guid: f1f9c11aaca75bc4193158be435927c3, type: 3}

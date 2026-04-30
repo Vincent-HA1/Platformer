@@ -7865,7 +7865,9 @@ MonoBehaviour:
   enemiesParent: {fileID: 147022584}
   blocksParent: {fileID: 0}
   jumpSound: {fileID: 505066711286351902, guid: 088321644891925418b8182132a1ee67, type: 3}
+  openParachuteSound: {fileID: 0}
   playerHitSound: {fileID: 7203002742881799541, guid: 1d9464aaebff47542aa960f2b960639c, type: 3}
+  playerPunchSound: {fileID: 0}
   playerKickSound: {fileID: 6126710667875635495, guid: c04eb9ed68b85dd4cae3d8822e485c58, type: 3}
   enemyHitSound: {fileID: 1549979658317049374, guid: fea92c4285bfdf4428b0be043cdb803b, type: 3}
   enemyDeathSound: {fileID: 7848062893853481194, guid: f1f9c11aaca75bc4193158be435927c3, type: 3}
@@ -8834,7 +8836,7 @@ Tilemap:
       - {fileID: -2135669256, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -810366419, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -731766649, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 22, y: -1, z: 0}
@@ -10939,7 +10941,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1662007635, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
       - {fileID: 1130332129, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: -3, z: 0}
@@ -11047,7 +11049,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1662007635, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
       - {fileID: 1130332129, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 145, y: 7, z: 0}
@@ -11065,7 +11067,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1662007635, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
       - {fileID: 1130332129, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 147, y: 7, z: 0}
@@ -11128,7 +11130,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1662007635, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
       - {fileID: 1130332129, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 130, y: 10, z: 0}
@@ -13385,6 +13387,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!114 &854462166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39474,7 +39477,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs: {fileID: 2028578686}
   resumeButton: {fileID: 1344330369}
+  optionsButton: {fileID: 0}
   quitButton: {fileID: 699368921}
+  background: {fileID: 0}
   pauseMenu: {fileID: 872881638}
 --- !u!1001 &1658644192
 PrefabInstance:
@@ -45331,6 +45336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall of Spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 8029589453903783761, guid: 2ad4d72cd0a7ea949ae849a595bfcb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45430,7 +45439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 818753285137398296, guid: 74350cd9e859e1c44b41a2502b6c596d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 818753285137398296, guid: 74350cd9e859e1c44b41a2502b6c596d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45466,7 +45475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635614620407084470, guid: 74350cd9e859e1c44b41a2502b6c596d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

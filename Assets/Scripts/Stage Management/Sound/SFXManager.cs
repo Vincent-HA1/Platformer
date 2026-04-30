@@ -15,7 +15,9 @@ public class SFXManager : MonoBehaviour
 
     [Header("Sound Effects")]
     [SerializeField] GameObject jumpSound;
+    [SerializeField] GameObject openParachuteSound;
     [SerializeField] GameObject playerHitSound;
+    [SerializeField] GameObject playerPunchSound;
     [SerializeField] GameObject playerKickSound;
     [SerializeField] GameObject enemyHitSound;
     [SerializeField] GameObject enemyDeathSound;
@@ -71,10 +73,12 @@ public class SFXManager : MonoBehaviour
         }
         //Player
         player.Jump += () => SpawnSoundEffect(jumpSound);
+        player.OpenParachute += () => SpawnSoundEffect(openParachuteSound);
         player.Hit += (float damage) => SpawnSoundEffect(playerHitSound);
         player.Healed += (float health) => SpawnSoundEffect(eatSound);
         player.Death += () => SpawnSoundEffect(playerHitSound);
         player.Bounce += () => SpawnSoundEffect(bounceSound);
+        player.PunchAction += () => SpawnSoundEffect(playerPunchSound);
         player.KickAction += () => SpawnSoundEffect(playerKickSound);
 
     }

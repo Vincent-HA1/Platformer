@@ -2,43 +2,47 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class JumpingEnemy : BaseEnemy
+public abstract class JumpingEnemy : BaseEnemy
 {
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
 
     [Header("References")]
-    [SerializeField] Transform groundPos;
-
+    [SerializeField] protected Transform groundPos;
 
     [Header("Ground Enemy Attributes")]
-    [SerializeField] float moveSpeed = 6;
-    [SerializeField] float groundCheckXOffset = 0.6f;
-    [SerializeField] float wallCheckDistance = 0.8f;
-    [SerializeField] float playerCheckDistance = 4;
-    [SerializeField] float minDistanceToPlayer = 0.3f;
+    [SerializeField] protected float moveSpeed = 2;
+    [SerializeField] protected float groundCheckXOffset = 0.6f;
+    [SerializeField] protected float wallCheckDistance = 0.8f;
+    [SerializeField] protected float playerCheckDistance = 4;
+    [SerializeField] protected float minDistanceToPlayer = 0.3f;
 
     [Header("Jump Enemy Attributes")]
-    [SerializeField] float minJumpTime = 1;
-    [SerializeField] float maxJumpTime = 2;
-    [SerializeField] float jumpForce = 6;
-    [SerializeField] float gravityForce = -20;
-    [SerializeField] float terminalNegativeVelocity = -20;
-    [SerializeField] bool canJump = false;
+    [SerializeField] protected float minJumpTime = 1;
+    [SerializeField] protected float maxJumpTime = 2;
+    [SerializeField] protected float jumpLagTime = 0.2f;
+    [SerializeField] protected float jumpForce = 6;
+    [SerializeField] protected float gravityForce = -20;
+    [SerializeField] protected float terminalNegativeVelocity = -20;
+    [SerializeField] protected bool canJump = false;
 
-    bool onGround = false;
-    bool jumping = false;
-    bool wallThere = false;
-    bool hitOtherEnemy = false;
-    bool setInitialJumpTimer = false;
-    float jumpTimer;
-    float verticalVelocity;
+    protected bool onGround = false;
+    protected bool jumping = false;
+    protected bool wallThere = false;
+    protected bool hitOtherEnemy = false;
+    protected bool setInitialJumpTimer = false;
+    protected float jumpTimer;
+    protected float jumpLagTimer;
+    protected float verticalVelocity;
+    protected Vector2 moveDirBeforeGettingHit;
+
     protected override void Update()
     {
         base.Update();
         float xOffset = jumping ? 0 : groundCheckXOffset; //if jumping, dont use the offset
-        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.2f, groundLayer); //offset the check so dont go over the ledge
+        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.18f, groundLayer); //offset the check so dont go over the ledge
         ManageJumpTimer();
+        HandleJumpInteraction();
     }
 
     protected override void UpdateAnims()
@@ -48,23 +52,36 @@ public class JumpingEnemy : BaseEnemy
         anim.SetBool("Falling", jumping && verticalVelocity <= 0);
     }
 
+    protected override void ResumeFromGettingHit()
+    {
+        base.ResumeFromGettingHit();
+        //After getting hit, make sure to return back to normal functionality
+        if (moveDirection == Vector2.zero)
+        {
+            //So continue moving like before
+            moveDirection = moveDirBeforeGettingHit;
+        }
+    }
+
     protected override void DetectPlayer()
     {
         base.DetectPlayer();
-        RaycastHit2D wallHit = Physics2D.Raycast(transform.position, moveDirection, wallCheckDistance, groundLayer);
+        RaycastHit2D[] wallHitResults = new RaycastHit2D[1];
+        int wallHitCount = boxCollider.Raycast(moveDirection, wallHitResults, wallCheckDistance, groundLayer);//RaycastHit2D wallHit = Physics2D.Raycast(transform.position, moveDirection, wallCheckDistance, groundLayer);
         RaycastHit2D playerHit = Physics2D.Raycast(transform.position, moveDirection, playerCheckDistance, playerLayer);
-        wallThere = wallHit.collider != null;
+        wallThere = wallHitCount > 0;//wallHit.collider != null;
         if (!player && playerHit.collider != null)
         {
             player = playerHit.collider.transform;
         }
         if ((playerHit.collider != null || !playerTooFar && playerDetected) && CanMove()) //Can only detect player if can move
         {
-            //Check if wall is not in between the player and the enemy by doing the same raycast but for the ground
-            RaycastHit2D wallPlayerCheck = Physics2D.Raycast(transform.position, moveDirection, playerCheckDistance, groundLayer);
+            //Check if wall is not in between the player and the enemy by doing the same raycast for the player but for the ground now
+            //RaycastHit2D wallPlayerCheck = Physics2D.Raycast(transform.position, moveDirection, playerCheckDistance, groundLayer);
+            wallHitCount = boxCollider.Raycast(moveDirection, wallHitResults, playerCheckDistance, groundLayer);
             float playerDistance = playerHit.collider == null ? 0 : Vector2.Distance(playerHit.point, transform.position);
-            float wallDistance = Vector2.Distance(wallPlayerCheck.point, transform.position);
-            if (wallPlayerCheck.collider == null || wallDistance > playerDistance)
+            float wallDistance = Vector2.Distance(wallHitResults[0].point, transform.position);//wallPlayerCheck.point, transform.position);
+            if (wallHitCount <= 0 || wallDistance > playerDistance)//wallPlayerCheck.collider == null || wallDistance > playerDistance)
             {
                 if (!playerDetected)
                 {
@@ -72,10 +89,9 @@ public class JumpingEnemy : BaseEnemy
                     playerDetected = true;
                     moving = true;
                 }
-
             }
             //Check if wall now in between player and the enemy. If so, have to cancel the chase, regardless of distance
-            else if (wallPlayerCheck.collider != null && wallDistance < playerDistance)
+            else if (wallHitCount > 0 && wallDistance <= playerDistance)//wallPlayerCheck.collider != null && wallDistance <= playerDistance)
             {
                 //Stop moving for now
                 if (playerDetected)
@@ -83,19 +99,18 @@ public class JumpingEnemy : BaseEnemy
                     playerDetected = false;
                     moveTimer = 0;
                 }
-
             }
-
         }
         else
         {
-            //Stop moving for now
-            if (playerDetected)
+            //Stop moving for now, as player too far or cannot move over there (for real, not just in jump lag)
+            if (playerDetected && ((!CanMove() && jumpLagTimer <=0) || playerTooFar))
             {
                 playerDetected = false;
                 moveTimer = 0;
             }
         }
+
         //Checking for other enemies
         List<RaycastHit2D> enemiesHit = Physics2D.RaycastAll(transform.position, moveDirection, 0.8f, enemyLayer).ToList();
         hitOtherEnemy = false;
@@ -107,19 +122,15 @@ public class JumpingEnemy : BaseEnemy
                 hitOtherEnemy = true;
             }
         }
-
     }
-    void ManageJumpTimer()
+
+    protected virtual void ManageJumpTimer()
     {
-        if (!canJump || hurt) return; //only some enemies can jump
-        if (onGround && verticalVelocity < 0)
-        {
-            jumping = false;
-        }
+        if (!canJump || hurt) return; //only some enemies can jump, don't jump when hurt        
         if (playerDetected)
         {
-            //add jump timer stuff
-            if (jumpTimer <= 0 && !jumping)
+            //If not jumping, then set the jump timer
+            if (jumpTimer <= 0 && !jumping && jumpLagTimer <= 0)
             {
                 //Set timer. If this is the start, then don't jump immediately
                 jumpTimer = Random.Range(minJumpTime, maxJumpTime);
@@ -132,7 +143,6 @@ public class JumpingEnemy : BaseEnemy
                     //Jump
                     PerformJump();
                 }
-
             }
             if (!jumping)
             {
@@ -144,89 +154,74 @@ public class JumpingEnemy : BaseEnemy
             //Allow the jump timer to be set next time (to not jump immediately)
             setInitialJumpTimer = false;
         }
+
     }
 
-    void PerformJump()
+    // Handle what happens once the enemy has actually jumped
+    void HandleJumpInteraction()
     {
-        verticalVelocity = jumpForce;
-        jumping = true;
-    }
-
-
-    //Called when changing direction during patrolling.
-    protected override void ChangeDirection()
-    {
-        //If hit a wall, then need to turn backwards. Otherwise, choose a random direction
-        if (!CanMove())
+        if (!canJump) return; //only some enemies can jump
+        // If finished jumping
+        if (onGround && verticalVelocity < 0 && jumping)
         {
-            moveDirection = -moveDirection;
-        }
-        else
-        {
-            int randomDir = Random.Range(0, 2);
-            moveDirection = randomDir == 0 ? moveDirection : -moveDirection;
-        }
-        base.ChangeDirection();
-    }
-
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-        ApplyMovement();
-    }
-
-    protected override void Patrol()
-    {
-        if (!playerDetected)
-        {
-            //If run into something, stop moving
-            if (moving && !CanMove())
-            {
-                moveTimer = 0;
-            }
-        }
-        else
-        {
-            MoveTowardsPlayer();
-
+            //Stop jump and set up lag
+            jumping = false;
+            jumpLagTimer = jumpLagTime;
+            moving = false;
         }
 
-    }
+        if (jumpLagTimer >= 0) jumpLagTimer -= Time.deltaTime;
 
-    void MoveTowardsPlayer()
-    {
+        //Make sure we don't jump through walls
         if (jumping)
         {
             //If jumping, then once reaching a wall, flip immediately (i.e. bounce off it)
-            if (!CanMove())
+            if (wallThere && !hurt)
             {
+                print("BOUNCE");
                 moveDirection = -moveDirection;
             }
             return;
         }
-        Vector2 difference = (player.position - transform.position);
-        moveDirection = new Vector2(Mathf.Sign(difference.x), 0);
+    }
+
+    protected virtual void PerformJump()
+    {
+        verticalVelocity = jumpForce;
+        jumping = true;
+        moveDirBeforeGettingHit = moveDirection;
+    }
+
+    protected virtual void MoveTowardsPlayer()
+    {
+        if (jumping) return;
+        Vector2 difference = Vector2.zero;
+        if (jumpLagTimer <= 0) //Can't spin around when in jump lag
+        {
+            difference = (player.position - transform.position);
+            moveDirection = new Vector2(Mathf.Sign(difference.x), 0);
+        }
         //Move towards player while it is allowed (i.e. player is far away enough)
         if (CanMove() && Mathf.Abs(difference.x) > minDistanceToPlayer)
         {
             moving = true;
         }
-        else
+        else if(jumpLagTimer <= 0) //So if not in jump lag, and still cant move, then have to stop moving
         {
             //If off ground, or enemy too close
             moving = false;
         }
     }
 
-    bool CanMove()
+    protected virtual bool CanMove()
     {
         //Returns the conditions for not being able to move
-        return (onGround || jumping) && !wallThere && !hitOtherEnemy;
-
+        return (onGround || jumping) && !wallThere && !hitOtherEnemy && jumpLagTimer <= 0;
     }
-    void ApplyMovement()
+
+    protected virtual void ApplyMovement()
     {
-        if (!moving && !jumping) return;
+        if ((!moving && !jumping) || jumpLagTimer > 0) return; //Don't do anything if standing still (or in jump lag)
 
         float dx = (moveDirection * Time.fixedDeltaTime * moveSpeed).x;
 
@@ -236,19 +231,18 @@ public class JumpingEnemy : BaseEnemy
         // Update vertical velocity (SUVAT), assuming initial velocity is 0. If on the ground, velocity is automatically 0
         verticalVelocity = !jumping ? 0 : Mathf.Max(terminalNegativeVelocity, verticalVelocity + gravityForce * Time.fixedDeltaTime);
 
-        Vector2 finalMovement = new Vector2(dx, dy);
+        Vector2 finalMovement = new Vector2(dx, dy); //new Vector2(0, dy);//new Vector2(dx, dy);
 
         // Apply movement to Rigidbody2D
         rigid.MovePosition(rigid.position + finalMovement);
     }
 
-
     protected override void GetHit()
     {
         base.GetHit();
         verticalVelocity = 0; //get knocked down
+        moveDirBeforeGettingHit = moveDirection;
         moveDirection = Vector2.zero;
     }
-
-
 }
+

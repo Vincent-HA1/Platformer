@@ -61,7 +61,6 @@ public class InputHandler : MonoBehaviour
         // Button went down
         jumpPressed = true;
         jumpHeld = true;
-        print("jump");
     }
 
     void OnJumpCanceled(InputAction.CallbackContext ctx)

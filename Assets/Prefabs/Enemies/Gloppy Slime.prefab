@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8134387357313627404}
   - component: {fileID: 7224533491044995034}
   - component: {fileID: 4043389536193458246}
-  - component: {fileID: 3491326826952326667}
   - component: {fileID: 220398067846109048}
   - component: {fileID: 5909547842085513886}
+  - component: {fileID: 5123269441921921862}
   m_Layer: 7
   m_Name: Gloppy Slime
   m_TagString: Enemy
@@ -30,9 +30,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4411922824350166995}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41, y: -1.51, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.41, y: -1.51, z: -1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3830317178278900495}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1123555381, guid: fabd758adf0582241a682a9090f8e8ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 4411922824350166995}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 6e2e2fcb01753834b9a2848b34c1b910, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9cc282288983c4546b88df31a195fc82, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -138,53 +138,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &3491326826952326667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411922824350166995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118b62e82b892b947b58ff9d1d8ac2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  deathExplosionPrefab: {fileID: 107637357290874137, guid: 7fbe6686d96f1184bbfb3a60fbfb674a, type: 3}
-  foodPrefab: {fileID: 2388372431308612479, guid: 1b56d1a7df4545e4da860db84f2daa9a, type: 3}
-  maxHealth: 3
-  patrol: 1
-  hurtTime: 0.5
-  minPatrolTime: 1.5
-  maxPatrolTime: 2
-  minWaitTime: 1
-  maxWaitTime: 1.25
-  detectionRadius: 3
-  maxDistanceToPlayer: 5
-  chanceForFoodDrop: 0.2
-  moving: 0
-  playerDetected: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  groundPos: {fileID: 3830317178278900495}
-  moveSpeed: 2
-  groundCheckXOffset: 0.6
-  wallCheckDistance: 0.5
-  playerCheckDistance: 4
-  minDistanceToPlayer: 0.3
-  minJumpTime: 1
-  maxJumpTime: 2
-  jumpForce: 6
-  gravityForce: -20
-  terminalNegativeVelocity: -20
-  canJump: 0
 --- !u!114 &220398067846109048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +199,39 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.37962955}
   m_UseDelaunayMesh: 0
+--- !u!114 &5123269441921921862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411922824350166995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ff4151ed4439d438ad01f064080368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  deathExplosionPrefab: {fileID: 107637357290874137, guid: 7fbe6686d96f1184bbfb3a60fbfb674a, type: 3}
+  foodPrefab: {fileID: 2388372431308612479, guid: 1b56d1a7df4545e4da860db84f2daa9a, type: 3}
+  maxHealth: 3
+  patrol: 1
+  hurtTime: 0.5
+  minPatrolTime: 1.5
+  maxPatrolTime: 2
+  minWaitTime: 1
+  maxWaitTime: 1.25
+  detectionRadius: 6
+  maxDistanceToPlayer: 5
+  chanceForFoodDrop: 0.2
+  moving: 0
+  playerDetected: 0
+  idleTimeMin: 2
+  idleTimeMax: 3
+  hideTimeMin: 1.5
+  hideTimeMax: 3
 --- !u!1 &4452953297595927608
 GameObject:
   m_ObjectHideFlags: 0
