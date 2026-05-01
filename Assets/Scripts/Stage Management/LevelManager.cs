@@ -11,20 +11,28 @@ public class LevelManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] Animator sceneFadeAnimator;
+    [SerializeField] TMPro.TextMeshProUGUI countdownText;
     [SerializeField] PauseMenu pauseMenu;
     [SerializeField] HUDManager hudManager;
+    [SerializeField] GameObject stageClearedText;
+    [SerializeField] GameObject countdownSFX;
 
     [Header("Level References")]
     [SerializeField] GameObject checkpointsParent;
     [SerializeField] GameObject collectiblesParent;
     [SerializeField] PlayerMovement player;
-    [SerializeField] MovingSpikes movingSpikes;
+    [SerializeField] GhostPlayer ghostPlayer;
+    //[SerializeField] MovingSpikes movingSpikes;
 
     [Header("Songs")]
     [SerializeField] AudioClip stageSong;
     [SerializeField] AudioClip levelEndSong;
+    [SerializeField] AudioClip levelFailSong;
     [SerializeField] float normalVolume = 1;
     [SerializeField] float pausedVolume = 0.5f;
+
+    [Header("Level Settings")]
+    [SerializeField] bool isATimeTrialStage = false;
 
     List<Checkpoint> checkpoints = new List<Checkpoint>();
     List<BigCoin> bigCoins = new List<BigCoin>();
@@ -39,9 +47,17 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         //Application.targetFrameRate = 60; //just for testing purposes
-
+        Time.timeScale = 1;
         audioSource = GetComponent<AudioSource>();
-        PlayAudioClip(stageSong, true);
+        if (isATimeTrialStage)
+        {
+            //Freeze time to begin with
+            Time.timeScale = 0;
+        }
+        else
+        {
+            PlayAudioClip(stageSong, true);
+        }
         AssignEvents();
         //Load save for this stage
         string sceneName = SceneManager.GetActiveScene().name;
@@ -73,6 +89,7 @@ public class LevelManager : MonoBehaviour
     void AssignEvents()
     {
         pauseMenu.Quit += QuitLevel;
+        pauseMenu.RetryStage += RetryLevel;
         //Checkpoint events
         checkpoints = checkpointsParent.GetComponentsInChildren<Checkpoint>().ToList();
         List<Collectible> allCollectibles = collectiblesParent.GetComponentsInChildren<Collectible>().ToList();
@@ -114,8 +131,34 @@ public class LevelManager : MonoBehaviour
     {
         cannotAct = true;
         yield return new WaitForEndOfFrame();
-        if (movingSpikes) movingSpikes.SetPosition();
+        //if (movingSpikes) movingSpikes.SetPosition();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        if (isATimeTrialStage)
+        {
+            //Start countdown
+            StartCoroutine(StartCountdown());
+        }
+        else
+        {
+            cannotAct = false;
+        }
+    }
+
+    IEnumerator StartCountdown()
+    {
+        countdownText.gameObject.SetActive(true);
+        Instantiate(countdownSFX); //countdown sound effect
+        //Countdown from 3, 2, 1
+        for (int i = 3; i > 0; i--)
+        {
+            countdownText.text = i.ToString();
+            yield return new WaitForSecondsRealtime(1);
+        }
+        countdownText.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        //Start level
+        ghostPlayer.StartMoving();
+        PlayAudioClip(stageSong, true);
         cannotAct = false;
     }
 
@@ -175,7 +218,7 @@ public class LevelManager : MonoBehaviour
         hudManager.UpdateHealthAmount(player.MaxHealth);
         player.Respawn(currentCheckpoint.transform.position);
         yield return new WaitForSeconds(0.5f);
-        if (movingSpikes) movingSpikes.SetPosition();
+        //if (movingSpikes) movingSpikes.SetPosition();
         sceneFadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
@@ -185,9 +228,27 @@ public class LevelManager : MonoBehaviour
 
     void EndLevel(Checkpoint endFlag)
     {
-        StartCoroutine(GoNextLevelAfterFade());
+        //check if it was reached by a ghost
+        if (endFlag.reachedByGhost)
+        {
+            StartCoroutine(FailedStage());
+        }
+        else
+        {
+            //Player reached end of stage
+            StartCoroutine(GoNextLevelAfterFade());
+        }
     }
 
+    IEnumerator FailedStage()
+    {
+        //Fade out, save, then load stage select
+        PlayAudioClip(levelFailSong, false); //play lose sound
+        cannotAct = true;
+        Time.timeScale = 0;
+        yield return new WaitUntil(() => audioSource.time >= audioSource.clip.length - 0.5f);
+        pauseMenu.OpenRetryMenu();
+    }
 
     IEnumerator GoNextLevelAfterFade()
     {
@@ -195,6 +256,7 @@ public class LevelManager : MonoBehaviour
         player.ReachedEndOfLevel();
         yield return new WaitUntil(() => player.onGround);
         PlayAudioClip(levelEndSong, false);
+        stageClearedText.SetActive(true);
         cannotAct = true;
         Time.timeScale = 0;
         SaveSystem.Save(currentStageSave);
@@ -205,19 +267,28 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("StageSelect");
     }
 
+
+    void RetryLevel()
+    {
+        EventSystem.current.enabled = false;
+        StartCoroutine(ChangeSceneAfterFade(SceneManager.GetActiveScene().name));
+    }
+
     void QuitLevel()
     {
         EventSystem.current.enabled = false;
-        StartCoroutine(QuitAfterFade());
+        StartCoroutine(ChangeSceneAfterFade("StageSelect"));
     }
 
-    IEnumerator QuitAfterFade()
+
+    IEnumerator ChangeSceneAfterFade(string sceneName)
     {
         //Return to title screen
         cannotAct = true;
         sceneFadeAnimator.SetTrigger("FadeOut");
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene(sceneName);
     }
+
 }

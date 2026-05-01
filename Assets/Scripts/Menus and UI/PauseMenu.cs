@@ -5,26 +5,42 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public Action RetryStage;
     public Action Quit;
 
     [Header("References")]
     [SerializeField] InputHandler inputs;
 
     [Header("UI References")]
+    [SerializeField] GameObject background;
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject retryMenu;
+
+    [Header("Pause Menu References")]
     [SerializeField] Button resumeButton;
     [SerializeField] Button optionsButton;
     [SerializeField] Button quitButton;
-    [SerializeField] GameObject background;
-    [SerializeField] GameObject pauseMenu;
+
+    [Header("Retry Menu References")]
+    [SerializeField] Button retryButton;
+    [SerializeField] Button returnToStageButton;
 
 
     public bool paused { get; private set; }
+
+    public void OpenRetryMenu()
+    {
+        retryMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(retryButton.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         resumeButton.onClick.AddListener(ClosePauseScreen);
         quitButton.onClick.AddListener(QuitGame);
+        retryButton.onClick.AddListener(Retry);
+        returnToStageButton.onClick.AddListener(QuitGame);
     }
 
     // Update is called once per frame
@@ -63,6 +79,11 @@ public class PauseMenu : MonoBehaviour
         LevelManager.cannotAct = false;
         EventSystem.current.SetSelectedGameObject(null);
         inputs.ResetAllBools(); //Clear inputs on unpausing
+    }
+
+    void Retry()
+    {
+        RetryStage?.Invoke();
     }
 
     void QuitGame()

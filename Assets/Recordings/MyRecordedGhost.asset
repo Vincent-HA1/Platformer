@@ -1,0 +1,7413 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381e85912e0b5154a93eee095f85e2c4, type: 3}
+  m_Name: MyRecordedGhost
+  m_EditorClassIdentifier: 
+  floatNames:
+  - Horizontal
+  - Speed
+  boolNames:
+  - Jumping
+  - Falling
+  - Attacking
+  - Kicking
+  - Hurt
+  - Gliding
+  - Swimming
+  - Victory
+  frames:
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.5, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.2630463, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -1.0502001, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.53, y: -0.82395196, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.53245825, y: -0.6094001, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.5480162, y: -0.424899, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.58033395, y: -0.25165665, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.6343336, y: -0.07370281, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.7045946, y: 0.07902688, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.7961471, y: 0.2261965, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0.91402066, y: 0.36895823, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 1.0450728, y: 0.47510773, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 1.187282, y: 0.55792207, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 1.3155857, y: 0.6083518, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 1.4635658, y: 0.64120173, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 1.6057743, y: 0.6449639, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 1.7469376, y: 0.6220775, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 1.8777865, y: 0.57636917, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.024619, y: 0.49949694, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.1562178, y: 0.4050772, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.3029556, y: 0.2740448, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.4360366, y: 0.1294343, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.5753627, y: -0.046590626, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.725881, y: -0.2647539, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 2.860956, y: -0.48734236, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 3.002954, y: -0.7468101, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 3.0325692, y: -0.75500166, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 3.169145, y: -0.3049182, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 3.3071406, y: 0.13070855, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 3.4531593, y: 0.5648635, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 3.5818465, y: 0.92262685, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 3.73375, y: 1.3187885, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 3.8606408, y: 1.6243186, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.0084867, y: 1.9552699, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.1439157, y: 2.232029, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.281396, y: 2.4882815, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.42802, y: 2.7346866, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.568027, y: 2.9428477, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.1296651, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.2743063, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.4049706, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.5105484, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.5920677, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.6459398, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.6728513, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.6720538, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.6471076, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.597207, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.5146015, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.574216, y: 3.417601, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.575141, y: 3.2834399, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.581949, y: 3.1282816, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.606634, y: 2.9493005, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.650241, y: 2.7432113, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.712626, y: 2.512315, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.7974854, y: 2.244501, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 4.9003983, y: 1.9579732, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 5.0185304, y: 1.6563147, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 5.1663237, y: 1.3229384, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 5.2971067, y: 1.0305449, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 5.445831, y: 0.6980387, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 5.587398, y: 0.45053402, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 5.7252207, y: 0.4493544, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 5.861423, y: 0.44936776, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 6.0053806, y: 0.44937557, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 6.1440105, y: 0.44937956, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 6.279238, y: 0.6751538, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 6.4236884, y: 0.9121907, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 6.556503, y: 1.1184311, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 6.699406, y: 1.3286742, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 6.846178, y: 1.5317541, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 6.981795, y: 1.7072502, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.127748, y: 1.8839759, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.2675414, y: 2.0407724, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.368565, y: 2.1454515, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.527105, y: 2.2994514, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.677101, y: 2.417987, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.826854, y: 2.5066688, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 7.964606, y: 2.5610137, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 8.100504, y: 2.5898092, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 8.245611, y: 2.594326, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 8.382305, y: 2.572328, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 8.514331, y: 2.527192, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 8.66115, y: 2.4720037, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 8.800614, y: 2.4192066, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 8.941376, y: 2.3659186, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.074945, y: 2.315353, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.213656, y: 2.262841, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.366953, y: 2.2048078, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.488174, y: 2.158917, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.641659, y: 2.100812, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.774818, y: 2.0504017, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 9.92522, y: 1.9934645, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.066867, y: 1.9398407, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.195077, y: 1.8913044, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.335633, y: 1.8380942, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.486462, y: 1.7809948, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.615852, y: 1.7320111, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.756352, y: 1.6788222, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 10.89509, y: 1.6263003, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.035973, y: 1.5729665, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.182693, y: 1.5174224, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.321186, y: 1.4649932, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.463598, y: 1.4110799, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.596667, y: 1.360704, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.731135, y: 1.3097982, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 11.872913, y: 1.2561257, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 12.026821, y: 1.1978607, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 12.159588, y: 1.1475992, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 12.2978735, y: 1.095248, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 12.423948, y: 1.0475198, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 12.575129, y: 0.9666947, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 12.720053, y: 0.8604099, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 12.859927, y: 0.73102105, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 12.99685, y: 0.57898855, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 13.140152, y: 0.4559676, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 13.277073, y: 0.44934043, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 13.4195595, y: 0.44935063, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 13.567125, y: 0.44935766, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 13.707029, y: 0.44936207, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 13.846738, y: 0.4493652, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 13.987653, y: 0.44936752, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 14.106664, y: 0.44936904, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 14.2672615, y: 0.4493708, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 14.406018, y: 0.6867928, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 14.542823, y: 0.9107428, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 14.677001, y: 1.1191711, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 14.822666, y: 1.3334165, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 14.956373, y: 1.5182067, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.095717, y: 1.6993628, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.246993, y: 1.8830352, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.379725, y: 2.0319803, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.524116, y: 2.1822438, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.661597, y: 2.2998435, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.801823, y: 2.3942003, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 15.940712, y: 2.4618344, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 16.086037, y: 2.5057652, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 16.228031, y: 2.5213628, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 16.367933, y: 2.5103831, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 16.496065, y: 2.4765503, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 16.63898, y: 2.4238222, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 16.777264, y: 2.3714724, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 16.920637, y: 2.3171952, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.052582, y: 2.2672439, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.208004, y: 2.2084053, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.341757, y: 2.1577697, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.487072, y: 2.102758, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.621668, y: 2.0518036, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.756804, y: 2.000645, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 17.898098, y: 1.9471544, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 18.033964, y: 1.8957189, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 18.185444, y: 1.8383731, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 18.32561, y: 1.7853101, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 18.430672, y: 1.7455363, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 18.600163, y: 1.6813715, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 18.742943, y: 1.6022748, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 18.875883, y: 1.5035263, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 19.016586, y: 1.3741345, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 19.160873, y: 1.2144636, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 19.293686, y: 1.0421963, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 19.435902, y: 0.83256054, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 19.58489, y: 0.58473766, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 19.712006, y: 0.46426636, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 19.85384, y: 0.44934544, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 20.001673, y: 0.4493565, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 20.13759, y: 0.44936335, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 20.284134, y: 0.44936866, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 20.417337, y: 0.6718743, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 20.55414, y: 0.89656365, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 20.705559, y: 1.1324605, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 20.844269, y: 1.3357865, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 20.983347, y: 1.527846, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.09046, y: 1.6667328, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.266033, y: 1.8819001, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.400162, y: 2.0324903, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.541557, y: 2.1796174, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.684267, y: 2.3157496, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.818638, y: 2.4322107, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 21.953114, y: 2.53772, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 22.104656, y: 2.6439996, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 22.24699, y: 2.73071, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 22.38709, y: 2.7899542, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 22.520628, y: 2.8216136, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 22.658098, y: 2.8298693, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 22.799448, y: 2.8125386, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 22.9388, y: 2.7693477, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 23.082064, y: 2.698414, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 23.224682, y: 2.6007147, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 23.363358, y: 2.4795065, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 23.486973, y: 2.4753675, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 23.64554, y: 2.4753675, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 23.787697, y: 2.7157314, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 23.919228, y: 2.9309106, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.061275, y: 3.151842, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.197826, y: 3.352377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.329714, y: 3.5350692, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.47248, y: 3.7212198, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.627838, y: 3.9100962, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.76084, y: 4.059266, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 24.901066, y: 4.205122, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.033722, y: 4.331744, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.185308, y: 4.4639874, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.325104, y: 4.559361, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.45612, y: 4.6244817, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.604324, y: 4.6722193, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.743494, y: 4.6898117, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 25.873856, y: 4.682278, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 26.01449, y: 4.6497574, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 26.156075, y: 4.590586, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 26.304361, y: 4.5337644, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 26.403767, y: 4.4961324, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 26.572575, y: 4.432226, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 26.707788, y: 4.3810377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 26.864838, y: 4.3215837, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.00114, y: 4.269983, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.127258, y: 4.2222376, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.286856, y: 4.161819, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.414848, y: 4.113364, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.558569, y: 4.0589557, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.691742, y: 4.00854, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.84693, y: 3.94979, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 27.982286, y: 3.8985472, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 28.11502, y: 3.8482983, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 28.262445, y: 3.792487, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 28.40429, y: 3.7387884, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 28.539185, y: 3.687721, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 28.682219, y: 3.6086552, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 28.822329, y: 3.5046542, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 28.96211, y: 3.3749194, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 29.09586, y: 3.2260308, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 29.246677, y: 3.0311503, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 29.383936, y: 2.8264973, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 29.522919, y: 2.5939672, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 29.663315, y: 2.4539268, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 29.805948, y: 2.449355, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 29.93897, y: 2.4493685, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 30.075745, y: 2.4493766, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 30.215387, y: 2.4493818, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 30.360853, y: 2.4493861, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 30.504309, y: 2.4367323, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 30.64566, y: 2.3980472, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 30.787634, y: 2.3325713, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 30.922907, y: 2.2447166, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 31.056957, y: 2.1336405, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 31.194849, y: 1.9948514, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 31.338717, y: 1.8236285, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 31.47727, y: 1.6323705, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 31.623383, y: 1.4549006, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 31.76579, y: 1.4493403, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 31.8982, y: 1.4493504, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 32.038036, y: 1.4493579, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 32.180584, y: 1.449364, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 32.325974, y: 1.6868315, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 32.458267, y: 1.903403, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 32.59611, y: 2.117901, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 32.746456, y: 2.3390663, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 32.87845, y: 2.5211663, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.01517, y: 2.6987498, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.15657, y: 2.8705392, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.302155, y: 3.0347824, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.445473, y: 3.183726, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.576557, y: 3.3084736, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.71927, y: 3.4328022, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.866177, y: 3.547929, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 33.999302, y: 3.6403244, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 34.141342, y: 3.7273088, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 34.28449, y: 3.7888775, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 34.42762, y: 3.8232698, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 34.558796, y: 3.8299024, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 34.69521, y: 3.8131013, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 34.83537, y: 3.770428, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 34.983505, y: 3.6976502, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.116596, y: 3.606272, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.265644, y: 3.4774418, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.400803, y: 3.3340373, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.53621, y: 3.166119, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.67324, y: 2.9715722, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.827446, y: 2.7242823, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 35.962147, y: 2.4809575, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 36.10025, y: 2.2068238, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 36.236168, y: 1.9121615, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 36.378117, y: 1.5954797, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 36.525745, y: 1.4513326, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 36.667736, y: 1.4493451, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 36.80148, y: 1.4493546, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 36.94222, y: 1.4493617, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 37.08742, y: 1.4493668, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 37.213108, y: 1.44937, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 37.353313, y: 1.665084, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 37.506386, y: 1.9167236, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 37.634773, y: 2.1158633, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 37.77797, y: 2.3266795, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 37.92038, y: 2.5238621, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.028168, y: 2.6638699, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.206226, y: 2.8822286, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.341766, y: 3.0343812, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.47643, y: 3.1743872, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.619236, y: 3.3110442, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.755886, y: 3.4299033, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 38.890923, y: 3.5360756, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 39.037697, y: 3.6392343, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 39.186996, y: 3.7168636, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 39.32557, y: 3.7615898, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 39.46394, y: 3.7808192, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 39.59466, y: 3.7750356, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 39.74774, y: 3.7414284, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 39.885696, y: 3.6833365, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.021305, y: 3.601429, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.156006, y: 3.4958715, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.301834, y: 3.3553946, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.440777, y: 3.1947687, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.58213, y: 3.0052798, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.726795, y: 2.7841988, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 40.86643, y: 2.5440576, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 41.003426, y: 2.2830718, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 41.136665, y: 2.0050695, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 41.278316, y: 1.6899924, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 41.416546, y: 1.4672195, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 41.55912, y: 1.449347, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 41.702724, y: 1.4493595, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 41.841343, y: 1.6789323, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 41.98192, y: 1.9094425, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.12247, y: 2.1278248, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.25154, y: 2.3172882, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.406017, y: 2.5316594, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.544357, y: 2.7106762, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.686295, y: 2.882328, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.815865, y: 3.0277798, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 42.956055, y: 3.1612036, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 43.101437, y: 3.2724552, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 43.247555, y: 3.3561246, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 43.37903, y: 3.4059741, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 43.519073, y: 3.4346437, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 43.65942, y: 3.4372988, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 43.7988, y: 3.4139977, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 43.94694, y: 3.361734, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.0866, y: 3.285113, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.216454, y: 3.1898317, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.363674, y: 3.0563166, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.49909, y: 2.9071894, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.6368, y: 2.7307997, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.782898, y: 2.5168529, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 44.927776, y: 2.2766752, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 45.05704, y: 2.0375743, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 45.198174, y: 1.7522951, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 45.337265, y: 1.4709501, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 45.48778, y: 1.4493456, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 45.62023, y: 1.6770432, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 45.75866, y: 1.9041271, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 45.895527, y: 2.1170757, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.03561, y: 2.3232672, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.17646, y: 2.5184982, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.318615, y: 2.7032654, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.457592, y: 2.8718376, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.603004, y: 3.0357914, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.740356, y: 3.1784742, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 46.873863, y: 3.3059595, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 47.015087, y: 3.4292245, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 47.165794, y: 3.5338812, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 47.305103, y: 3.6029403, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 47.439125, y: 3.6446338, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 47.578857, y: 3.6632407, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 47.716328, y: 3.6560926, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 47.86236, y: 3.6217434, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.003204, y: 3.5614111, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.136192, y: 3.479649, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.285275, y: 3.3615026, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.418716, y: 3.2295125, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.557453, y: 3.0677114, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.696335, y: 2.8801851, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.836277, y: 2.6654315, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 48.986435, y: 2.4069667, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 49.12619, y: 2.138719, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 49.262897, y: 1.8509762, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 49.400787, y: 1.5433403, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 49.53883, y: 1.4544021, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 49.663807, y: 1.4493357, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 49.824883, y: 1.6850722, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 49.96383, y: 1.9126109, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.106144, y: 2.1335516, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.240185, y: 2.3299797, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.382004, y: 2.5261576, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.521683, y: 2.693872, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.660397, y: 2.8347456, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.80732, y: 2.956831, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 50.946278, y: 3.0452828, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 51.081097, y: 3.10626, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 51.227825, y: 3.1463084, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 51.360004, y: 3.156715, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 51.497765, y: 3.1434276, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 51.640034, y: 3.1036506, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 51.768036, y: 3.0438583, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 51.927547, y: 2.9415948, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 52.058414, y: 2.830428, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 52.205685, y: 2.6796656, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 52.346596, y: 2.5079672, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 52.481583, y: 2.3182678, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 52.569366, y: 2.240194, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.665325, y: 2.899654, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.671917, y: 3.600971, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.671913, y: 4.2622514, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.671906, y: 4.8855734, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.67191, y: 5.5046844, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.67191, y: 6.082964, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.67191, y: 6.626367, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 52.892952, y: 7.1421123, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 53.12316, y: 7.6405416, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 53.3567, y: 8.12203, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 53.590904, y: 8.580049, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 53.81136, y: 8.9874325, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 54.04752, y: 9.3995, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 54.273552, y: 9.768695, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 54.493782, y: 10.104571, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 54.707428, y: 10.407593, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 54.94604, y: 10.720784, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 55.159264, y: 10.975405, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 55.375225, y: 11.210034, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 55.589596, y: 11.419248, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 55.8174, y: 11.616088, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 56.042213, y: 11.783448, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 56.251022, y: 11.9139, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 56.46753, y: 12.02467, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 56.687386, y: 12.1110115, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 56.898678, y: 12.168192, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 57.106743, y: 12.19971, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 57.325863, y: 12.206727, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 57.530746, y: 12.187326, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 57.7518, y: 12.139613, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 57.960495, y: 12.067109, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 58.167248, y: 11.969134, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 58.365864, y: 11.849795, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 58.583115, y: 11.692234, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 58.784927, y: 11.518222, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 58.98123, y: 11.323537, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 59.193096, y: 11.086222, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 59.391056, y: 10.836828, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 59.583385, y: 10.569017, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 59.791904, y: 10.251211, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 59.984158, y: 9.949127, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 60.194862, y: 9.616162, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 60.382595, y: 9.317899, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 60.57212, y: 9.015335, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 60.779724, y: 8.682241, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 60.972466, y: 8.371318, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 61.16848, y: 8.05349, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 61.3533, y: 7.752223, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 61.538734, y: 7.4484296, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 61.735195, y: 7.12493, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 61.921066, y: 6.817191, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 62.12168, y: 6.4833016, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 62.30329, y: 6.1793327, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 62.492584, y: 5.860838, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 62.662994, y: 5.572546, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 62.849556, y: 5.2553453, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 63.03263, y: 4.94235, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 63.218193, y: 4.6233587, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 63.404697, y: 4.300939, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 63.575882, y: 4.0033183, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 63.75376, y: 3.6924188, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 63.92999, y: 3.3826833, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 64.1166, y: 3.0528533, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 64.28968, y: 2.7451165, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 64.47441, y: 2.4148312, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 64.63962, y: 2.117658, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 64.806595, y: 1.8156537, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 64.98088, y: 1.4986489, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.13363, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.26367, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.40317, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.55281, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.689644, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.82883, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 65.9705, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.11092, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.24785, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.39354, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.53262, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.66825, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.80803, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 66.94935, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.082924, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.223724, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.368576, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.50623, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.64366, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.78848, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 67.92428, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 68.063515, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 68.2082, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 68.3433, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 68.47862, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 68.62113, y: 1.474916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 68.77174, y: 1.7122002, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 68.91264, y: 1.9428586, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.04204, y: 2.1435256, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.19118, y: 2.362934, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.325806, y: 2.548757, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.465675, y: 2.7302763, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.60904, y: 2.904045, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.74143, y: 3.0529332, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 69.88455, y: 3.2022338, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.02689, y: 3.3382635, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.16799, y: 3.4608123, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.30895, y: 3.571062, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.44455, y: 3.6654406, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.58458, y: 3.7512584, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.72284, y: 3.8241534, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 70.87115, y: 3.8897197, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 71.00914, y: 3.9382517, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 71.13926, y: 3.9730484, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 71.288574, y: 4.0009646, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 71.43007, y: 4.0145597, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 71.56828, y: 4.002435, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 71.70878, y: 3.9643383, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 71.845055, y: 3.9020145, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 71.98221, y: 3.8145065, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 72.12294, y: 3.6990643, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 72.26069, y: 3.560398, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 72.40121, y: 3.3932228, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 72.551735, y: 3.3257287, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 72.692604, y: 3.2724001, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 72.833374, y: 3.2191079, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 72.96549, y: 3.1690912, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.10848, y: 3.1149592, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.25158, y: 3.0607872, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.3913, y: 3.0078938, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.53214, y: 2.9545732, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.667725, y: 2.9032447, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.805595, y: 2.8510506, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 73.95192, y: 2.7956593, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.0874, y: 2.744368, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.22702, y: 2.6915107, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.36551, y: 2.6390808, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.50131, y: 2.587671, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.6504, y: 2.531231, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.78741, y: 2.4793644, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 74.92882, y: 2.42583, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.06831, y: 2.373021, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.20234, y: 2.3222816, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.35291, y: 2.2652786, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.48786, y: 2.214189, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.62732, y: 2.1613953, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.7637, y: 2.1097658, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 75.90196, y: 2.057425, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.04073, y: 2.004887, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.191345, y: 1.9478717, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.32608, y: 1.8968645, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.47325, y: 1.8411491, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.61299, y: 1.7882456, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.74494, y: 1.7382946, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 76.88414, y: 1.6855958, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.02617, y: 1.6318278, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.16599, y: 1.5788964, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.30579, y: 1.5259714, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.45318, y: 1.470176, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.59304, y: 1.4172254, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.73055, y: 1.3651693, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 77.866325, y: 1.3137689, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 78.01311, y: 1.2581999, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.15365, y: 1.2049954, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.29001, y: 1.1280892, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.428055, y: 1.0252671, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.566574, y: 0.8967314, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.71307, y: 0.73380333, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.84319, y: 0.56384915, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 78.98425, y: 0.45623574, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.12805, y: 0.44934338, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.26956, y: 0.4493535, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.40901, y: 0.44936016, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.54157, y: 0.4493646, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.686844, y: 0.44936815, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 79.82447, y: 0.67421854, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 79.960175, y: 0.89698774, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.10367, y: 1.1205801, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.24368, y: 1.3264767, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.39184, y: 1.5315886, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.5267, y: 1.706126, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.64799, y: 1.8531415, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.81015, y: 2.0235846, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.95105, y: 2.1420286, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.09005, y: 2.2328997, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.228264, y: 2.2977746, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.36571, y: 2.3370996, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.51026, y: 2.3520343, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 81.651924, y: 2.3395457, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 81.78903, y: 2.3017085, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 81.92357, y: 2.2512586, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.07358, y: 2.194467, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.20391, y: 2.1451275, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.34452, y: 2.0918963, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.49286, y: 2.0357418, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.63221, y: 1.9829848, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.76845, y: 1.93141, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 82.90364, y: 1.8802286, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.047485, y: 1.8257728, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.186615, y: 1.7731025, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.32252, y: 1.7216537, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.47004, y: 1.6658034, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.60156, y: 1.6160175, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.75169, y: 1.5591803, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 83.88296, y: 1.5094858, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 84.02361, y: 1.5053678, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 84.161804, y: 1.5053678, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 84.301125, y: 1.5053678, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 84.45305, y: 1.5053678, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 84.57372, y: 1.5053678, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 84.73269, y: 1.7443962, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 84.86834, y: 1.9663746, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.004005, y: 2.1771429, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.14798, y: 2.3887944, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.250824, y: 2.5310779, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.43007, y: 2.766507, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.56595, y: 2.9308512, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.704666, y: 3.0870953, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.84466, y: 3.2328637, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 85.985596, y: 3.3675478, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.121445, y: 3.4856675, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.27209, y: 3.6040132, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.40622, y: 3.6970978, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.54877, y: 3.7842956, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.68953, y: 3.8581293, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.825645, y: 3.9178028, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 86.963615, y: 3.9667926, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 87.10794, y: 4.005812, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 87.24888, y: 4.0314827, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 87.38451, y: 4.044502, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 87.5253, y: 4.0331583, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 87.66503, y: 3.995814, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 87.80112, y: 3.9342651, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 87.95141, y: 3.8389356, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 88.090034, y: 3.723524, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 88.227455, y: 3.583864, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 88.373116, y: 3.4499586, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 88.51061, y: 3.449334, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 88.64479, y: 3.4493434, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 88.65382, y: 3.4493494, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 88.51446, y: 3.4493525, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 88.39121, y: 3.4493537, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 88.2405, y: 3.6788545, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 88.09949, y: 3.9100773, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.98147, y: 4.093491, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.81726, y: 4.3363204, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.6838, y: 4.5205956, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.5402, y: 4.707114, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.40095, y: 4.875759, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.25461, y: 5.0404716, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 87.12415, y: 5.1756487, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.97576, y: 5.3175087, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.84608, y: 5.4297657, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.6962, y: 5.5475073, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.56392, y: 5.6393566, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.41856, y: 5.7284837, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.283226, y: 5.7994523, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.14596, y: 5.860066, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 86.00027, y: 5.912099, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 85.85873, y: 5.950058, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 85.72486, y: 5.9743834, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 85.57536, y: 5.98921, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 85.43686, y: 5.976634, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 85.300476, y: 5.939204, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 85.16607, y: 5.8780346, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 85.01699, y: 5.7834067, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 84.880516, y: 5.6699414, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 84.74509, y: 5.532848, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 84.59753, y: 5.3568134, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 84.45787, y: 5.1629715, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 84.31731, y: 5.1056666, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 84.17535, y: 5.051923, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 84.03998, y: 5.000678, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 83.90429, y: 4.9493103, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 83.76543, y: 4.8967404, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 83.61491, y: 4.839756, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 83.476234, y: 4.7872586, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 83.342186, y: 4.7120614, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 83.20431, y: 4.6102014, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 83.05784, y: 4.4750957, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 82.919975, y: 4.471352, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 82.78195, y: 4.471352, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 82.636635, y: 4.471352, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 82.50576, y: 4.471352, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 82.35753, y: 4.7060046, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 82.222824, y: 4.926675, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 82.0747, y: 5.1570244, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.94573, y: 5.345949, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.807724, y: 5.537219, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.65482, y: 5.736087, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.5159, y: 5.903874, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.38256, y: 6.053584, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.24536, y: 6.196434, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 81.1003, y: 6.335223, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.95768, y: 6.4590425, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.82124, y: 6.565591, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.68071, y: 6.6635985, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.53674, y: 6.751599, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.39665, y: 6.8248897, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.26583, y: 6.8821325, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 80.11996, y: 6.934217, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 79.97387, y: 6.973346, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 79.839584, y: 6.9839, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 79.69405, y: 6.969372, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 79.561615, y: 6.930622, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 79.42481, y: 6.866594, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 79.276855, y: 6.7703424, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 79.16582, y: 6.676518, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 79.012146, y: 6.523296, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 78.86144, y: 6.4523187, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 78.78356, y: 6.44934, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 78.57385, y: 6.449354, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 78.497765, y: 6.449357, z: -1}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 0
+  - pos: {x: 78.43385, y: 6.449362, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 78.562164, y: 6.4493647, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 78.702614, y: 6.4493675, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 78.84526, y: 6.4493694, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 78.98896, y: 6.4493723, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.127045, y: 6.449374, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.26064, y: 6.449376, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 79.39981, y: 6.449378, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 79.542305, y: 6.6705117, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 79.6886, y: 6.9107866, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 79.82242, y: 7.118664, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 79.97196, y: 7.338629, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.10341, y: 7.519982, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.25139, y: 7.7121997, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.39164, y: 7.8817167, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.52259, y: 8.028754, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.66298, y: 8.175133, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.81271, y: 8.3183, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 80.952194, y: 8.4389515, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.08438, y: 8.542015, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.22495, y: 8.640223, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.36341, y: 8.72505, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.49756, y: 8.795887, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.64793, y: 8.862804, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.78589, y: 8.911598, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 81.925735, y: 8.949237, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 82.06499, y: 8.974798, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 82.202225, y: 8.9883, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 82.338234, y: 8.977826, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 82.48631, y: 8.939472, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000100000000
+    facingRight: 1
+  - pos: {x: 82.77404, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 83.0708, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 83.37311, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 83.65475, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 83.94108, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 84.23294, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 84.50762, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 84.778145, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.00327, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.23802, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.43848, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.60168, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.72797, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.828285, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 85.898766, y: 8.937377, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000100000000
+    facingRight: 1
+  - pos: {x: 86.0291, y: 8.925497, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 86.17346, y: 8.887522, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 86.31352, y: 8.823927, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 86.460594, y: 8.729742, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 86.59872, y: 8.614422, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 86.730576, y: 8.480195, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 86.872765, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.01989, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.156204, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.30032, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.43548, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.57719, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.719444, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 87.85951, y: 8.469379, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 87.99626, y: 8.70195, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.13742, y: 8.933282, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.27275, y: 9.143352, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.41369, y: 9.350454, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.54723, y: 9.535196, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.69026, y: 9.721308, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.83351, y: 9.895157, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 88.97632, y: 10.05596, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.11669, y: 10.201763, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.256485, y: 10.334954, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.39591, y: 10.455859, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.533195, y: 10.563189, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.675255, y: 10.662295, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.81396, y: 10.747013, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 89.954605, y: 10.820967, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 90.09617, y: 10.883214, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 90.23481, y: 10.932162, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 90.37114, y: 10.968736, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 90.51696, y: 10.99563, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 90.655014, y: 11.008808, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 90.79398, y: 10.997042, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 90.93222, y: 10.959862, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.07298, y: 10.896162, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.214066, y: 10.805975, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.35543, y: 10.689149, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.49603, y: 10.546593, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.63356, y: 10.381525, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.77005, y: 10.192812, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 91.91153, y: 9.97154, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 92.05416, y: 9.721685, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 92.19308, y: 9.452094, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 92.339424, y: 9.141033, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 92.47354, y: 8.841342, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 92.61419, y: 8.526893, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 92.75476, y: 8.212633, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 92.89142, y: 8.149053, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.03695, y: 8.093962, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.17726, y: 8.04084, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.3129, y: 7.989494, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.454155, y: 7.9360156, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.589775, y: 7.8846736, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.73511, y: 7.8296537, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 93.87492, y: 7.776725, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.012314, y: 7.724714, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.15962, y: 7.6689477, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.29475, y: 7.617793, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.42004, y: 7.57036, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.58032, y: 7.509679, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.7186, y: 7.457333, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.8517, y: 7.4069424, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 94.998924, y: 7.3512096, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.13387, y: 7.3001204, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.278755, y: 7.2452736, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.41741, y: 7.192781, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.5565, y: 7.1401258, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.68912, y: 7.0899205, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.83238, y: 7.0356846, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 95.97128, y: 6.9831004, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.1205, y: 6.926613, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.24658, y: 6.8788786, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.3925, y: 6.823638, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.53885, y: 6.7682376, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.670296, y: 6.718471, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.81974, y: 6.6618977, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 96.95221, y: 6.6117477, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.09457, y: 6.557856, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.23333, y: 6.505321, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.37033, y: 6.453458, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.51139, y: 6.4000545, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.64842, y: 6.3481812, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.78447, y: 6.2966743, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 97.93204, y: 6.2408123, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.075455, y: 6.186518, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.21325, y: 6.1343536, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.35892, y: 6.079208, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.49446, y: 6.0278916, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.63516, y: 5.97463, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.777626, y: 5.9206967, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 98.91435, y: 5.8689327, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 99.04585, y: 5.8191514, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 99.19838, y: 5.76141, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 99.33902, y: 5.7081666, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 99.469246, y: 5.63507, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 99.61633, y: 5.5269547, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 99.7502, y: 5.4550924, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 99.89964, y: 5.4493394, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.0323, y: 5.449349, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.17237, y: 5.449355, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.31078, y: 5.44936, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.45626, y: 5.449363, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.597404, y: 5.4493656, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.733246, y: 5.4493675, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 100.878654, y: 5.449369, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 101.0119, y: 5.44937, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 101.16102, y: 5.449372, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 101.29118, y: 5.449373, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 101.43637, y: 5.4493737, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 101.569725, y: 5.4493747, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 101.7107, y: 5.449375, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 101.853714, y: 5.6776776, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 101.99559, y: 5.910383, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.1293, y: 6.1181026, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.27683, y: 6.3351345, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.41481, y: 6.5257215, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.5506, y: 6.701805, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.6922, y: 6.8736486, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.83048, y: 7.0294886, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 102.97698, y: 7.182125, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.106476, y: 7.3054986, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.25515, y: 7.435246, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.40019, y: 7.5486803, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.534134, y: 7.6415563, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.66964, y: 7.724428, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.81686, y: 7.8021708, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 103.95412, y: 7.8623414, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 104.08911, y: 7.9101853, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 104.23328, y: 7.949311, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 104.37774, y: 7.9757776, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 104.51297, y: 7.9886217, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 104.64791, y: 7.977597, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 104.79007, y: 7.94044, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 104.92855, y: 7.8781934, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 105.07117, y: 7.7878156, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 105.21257, y: 7.671482, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 105.3534, y: 7.5292115, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 105.48735, y: 7.456385, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 105.638016, y: 7.449338, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 105.76889, y: 7.4493475, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 105.90965, y: 7.4493556, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 106.05592, y: 7.449362, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 106.194824, y: 7.449366, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 106.33125, y: 7.4493694, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 106.48016, y: 7.6888146, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 106.609375, y: 7.9002385, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 106.75189, y: 8.122143, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 106.89401, y: 8.331036, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.04051, y: 8.533606, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.18101, y: 8.715297, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.31802, y: 8.8807, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.44063, y: 9.018449, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.599884, y: 9.1851425, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.731094, y: 9.309893, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 107.87338, y: 9.433731, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 108.013405, y: 9.5301695, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 108.15784, y: 9.60278, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 108.28875, y: 9.643587, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 108.44068, y: 9.664324, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 108.57402, y: 9.655824, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 108.710724, y: 9.622953, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 108.850876, y: 9.563808, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 108.98947, y: 9.479574, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.138245, y: 9.361647, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.28024, y: 9.221187, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.41313, y: 9.064718, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.55139, y: 8.877554, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.691154, y: 8.662714, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.8392, y: 8.407583, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 109.97237, y: 8.239031, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.981064, y: 8.228106, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.87892, y: 8.228114, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.77013, y: 8.228121, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.67008, y: 8.228125, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228127, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228128, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.659454, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.75958, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.86647, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 109.97748, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.08542, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.18758, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.2982, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.40316, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.513596, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.62249, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.72683, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.83758, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 110.94535, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.04875, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.150345, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.26134, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.37459, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.47658, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.58843, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.69505, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.794815, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 111.90361, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.012405, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.1227, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.23103, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.330605, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.44612, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.54495, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.66055, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.76632, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.87497, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 112.9736, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.08354, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.1962, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.298, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.40048, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.51571, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.62561, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.72595, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.83249, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 113.941444, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.053635, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.15156, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.26146, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.371994, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.47922, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.58449, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.68858, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.80187, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 114.907745, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.015076, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.228129, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.019455, y: 8.462185, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.02009, y: 8.684536, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.024864, y: 8.911793, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.04782, y: 9.116257, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.08949, y: 9.306828, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.14798, y: 9.480612, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.22921, y: 9.655487, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.32825, y: 9.812652, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.44899, y: 9.960844, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.58517, y: 10.091859, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.72507, y: 10.213374, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 115.86296, y: 10.3213005, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 116.000305, y: 10.417213, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 116.14731, y: 10.507447, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 116.28641, y: 10.580354, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 116.42385, y: 10.627486, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 116.56439, y: 10.65003, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 116.70362, y: 10.646418, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 116.84512, y: 10.61659, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 116.983116, y: 10.561631, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.117065, y: 10.48382, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.2645, y: 10.371744, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.40129, y: 10.241189, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.54075, y: 10.082743, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.68067, y: 9.8978815, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.82046, y: 9.687266, z: -1}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.970604, y: 9.433032, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 9.175105, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 8.881029, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 8.575935, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 8.268192, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.95973, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.6303368, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4561625, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493427, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.449352, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.449357, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493604, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493628, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.449364, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493656, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493666, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.971725, y: 7.4493675, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.449368, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493685, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.449369, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493694, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493694, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.971725, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.971725, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97171, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 117.97172, y: 7.4493704, z: -1}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1

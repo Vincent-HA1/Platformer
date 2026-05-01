@@ -1,0 +1,5511 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381e85912e0b5154a93eee095f85e2c4, type: 3}
+  m_Name: MyRecordedGhost 1
+  m_EditorClassIdentifier: 
+  floatNames:
+  - Horizontal
+  - Speed
+  boolNames:
+  - Jumping
+  - Falling
+  - Attacking
+  - Kicking
+  - Hurt
+  - Gliding
+  - Swimming
+  - Victory
+  frames:
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - -1
+    - 0
+    boolValues: 0001000000000000
+    facingRight: 0
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0100000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000010000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 1
+    boolValues: 0001000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000001000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
+  - pos: {x: 0, y: 0, z: 0}
+    floatValues:
+    - 1
+    - 0
+    boolValues: 0000000000000000
+    facingRight: 1
