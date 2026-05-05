@@ -7,10 +7,12 @@ using UnityEngine.UI;
 
 public class StageSelectManager : MonoBehaviour
 {
+
     [Header("References")]
     [SerializeField] GameObject stageWaypointsParent;
     [SerializeField] GameObject playerCharacter;
     [SerializeField] Animator sceneFadeAnimator;
+    [SerializeField] StageSelectCamera cameraScript;
 
     [Header("UI Elements")]
     [SerializeField] GameObject bigCoinIndicatorPrefab;
@@ -30,6 +32,7 @@ public class StageSelectManager : MonoBehaviour
     Vector2 movementInput;
     Vector2 moveDirection;
     bool moving;
+    bool movingToNextWorld;
 
     SaveData saveData;
     List<StageWaypoint> stageWaypoints;
@@ -40,6 +43,7 @@ public class StageSelectManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //SaveSystem.DeleteSave();
         Time.timeScale = 1;
         loadingScene = true;
         playerAnimator = playerCharacter.GetComponent<Animator>();
@@ -47,6 +51,7 @@ public class StageSelectManager : MonoBehaviour
         inputHandler = GetComponent<InputHandler>();
         stageWaypoints = stageWaypointsParent.GetComponentsInChildren<StageWaypoint>().ToList();
         saveData = SaveSystem.Load();
+        StageWaypoint furthestStageCompleted = null;
         if (saveData != null)
         {
             //Foreach stage that has been saved (i.e. completed), set the relevant flag to show it
@@ -56,8 +61,17 @@ public class StageSelectManager : MonoBehaviour
                 if (stageSave != null)
                 {
                     stageWaypoint.SetStageCompleted();
+                    furthestStageCompleted = stageWaypoint; //Update the furthest stage completed
                 }
             }
+        }
+        if(furthestStageCompleted != null)
+        {
+            print(furthestStageCompleted);
+            //allow the next stage from this stage to be reachable
+            int index = stageWaypoints.FindIndex(x => x == furthestStageCompleted);
+            if(index < stageWaypoints.Count - 1) stageWaypoints[index + 1].SetStageReachable();
+            print(stageWaypoints[index + 1]);
         }
 
         UpdateUI();
@@ -68,6 +82,7 @@ public class StageSelectManager : MonoBehaviour
     {
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
         loadingScene = false;
+        movingToNextWorld = false;
         exitTimer = exitTime;
     }
 
@@ -103,6 +118,7 @@ public class StageSelectManager : MonoBehaviour
     //Don't allow holding the movement input.  
     void GetMovementInput()
     {
+        if (movingToNextWorld) return; //no inputs when moving to next world
         if (!moving)
         {
             Vector2 newInput = new Vector2(inputHandler.movement.x, 0f);
@@ -154,12 +170,25 @@ public class StageSelectManager : MonoBehaviour
                 int nextWaypointIndex = currentWaypoint + (int)movementInput.x;
                 if (nextWaypointIndex >= 0 && nextWaypointIndex < stageWaypoints.Count)
                 {
-                    moving = true;
-                    moveLerp = 0;
-                    moveDirection = movementInput;
-                    destination = stageWaypoints[nextWaypointIndex].transform.position;
-                    startPoint = stageWaypoints[currentWaypoint].transform.position;
-                    currentWaypoint = nextWaypointIndex;
+                    //Check if the next waypoint is reachable
+                    StageWaypoint nextWaypoint = stageWaypoints[nextWaypointIndex];
+                    if (nextWaypoint.IsReachable())
+                    {
+                        StageWaypoint lastWaypoint = stageWaypoints[currentWaypoint];
+                        moving = true;
+                        moveLerp = 0;
+                        moveDirection = movementInput;
+                        destination = nextWaypoint.transform.position;
+                        startPoint = lastWaypoint.transform.position;
+                        currentWaypoint = nextWaypointIndex;
+                        //Check if moving worlds
+                        if(nextWaypoint.transform.parent != lastWaypoint.transform.parent)
+                        {
+                            float direction = Mathf.Sign(nextWaypoint.transform.position.x - lastWaypoint.transform.position.x);
+                            StartCoroutine(MoveToNextWorld((int)direction));
+                        }
+                    }
+
                 }
             }
         }
@@ -202,6 +231,18 @@ public class StageSelectManager : MonoBehaviour
             loadingScene = true;
             StartCoroutine(LoadStage());
         }
+    }
+
+    IEnumerator MoveToNextWorld(int direction)
+    {
+        movingToNextWorld = true;
+        sceneFadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        cameraScript.ShiftCamera(direction); //Slide the camera over
+        yield return new WaitForSeconds(1f);
+        sceneFadeAnimator.SetTrigger("FadeIn");
+        StartCoroutine(WaitForSceneFade());
     }
 
     IEnumerator LoadStage()

@@ -36,7 +36,7 @@ public class GhostRecorder : MonoBehaviour
         if (isRecording)
         {
             GhostFrame frame = new GhostFrame();
-            frame.pos = transform.position;
+            frame.pos = playerToRecord.transform.position;
             frame.facingRight = sr.flipX == false;
 
             // Capture Animation floats

@@ -7,6 +7,7 @@ public class StageWaypoint : MonoBehaviour
     [SerializeField] string stageToLoad;
     [SerializeField] int numberOfBigCoins;
 
+    [SerializeField] bool reachable = false;
     Animator anim;
 
     private void Awake()
@@ -25,6 +26,17 @@ public class StageWaypoint : MonoBehaviour
     }
     public void SetStageCompleted()
     {
+        reachable = true;
         anim.SetBool("Found", true);
+    }
+
+    public void SetStageReachable()
+    {
+        reachable = true;
+    }
+
+    public bool IsReachable()
+    {
+        return reachable;
     }
 }
