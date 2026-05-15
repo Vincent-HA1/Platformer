@@ -17,15 +17,16 @@ public class StageSelectCamera : MonoBehaviour
         cameraConfinerCollider.position += new Vector3(xOffsetAmount * direction, 0);
         confiner.InvalidateCache();
     }
-    // Start is called before the first frame update
-    void Start()
+
+    //Shift the camera set amount of times for the world
+    public void SetCameraPosition(int worldIndex)
     {
-        
+        cameraConfinerCollider.position += new Vector3(xOffsetAmount * worldIndex, 0);
+        confiner.InvalidateCache();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        confiner.InvalidateCache();
     }
 }

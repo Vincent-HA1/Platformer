@@ -15,9 +15,9 @@ public static class SaveSystem
         //If there are no stages saved, initialise the list of saves
         if (data == null)
         {
-            data = new SaveData(new List<StageSave>());
+            data = new SaveData(new List<StageSave>(), 0, 0);
         }
-        //add the stage save
+        //Add the new stage save (from the stage just cleared)
         int listIndex = data.stagesSaved.FindIndex(s => s.stageName == stageSave.stageName);
         if (listIndex != -1)
         {
@@ -26,9 +26,23 @@ public static class SaveSystem
         }
         else
         {
-            //add it
+            //Otherwise, add it as a new stage
             data.stagesSaved.Add(stageSave);
         }
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(savePath, json);
+    }
+
+    public static void SaveLastStageEntered(int lastStageEntered, int lastWorldEntered)
+    {
+        SaveData data = Load();
+        //If there are no stages saved, initialise the list of saves
+        if (data == null)
+        {
+            data = new SaveData(new List<StageSave>(), 0, 0);
+        }
+        data.lastStageEntered = lastStageEntered;
+        data.lastWorldEntered = lastWorldEntered;
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(savePath, json);
     }
@@ -56,9 +70,13 @@ public static class SaveSystem
 public class SaveData
 {
     public List<StageSave> stagesSaved;
+    public int lastStageEntered;
+    public int lastWorldEntered;
 
-    public SaveData(List<StageSave> stagesSaved)
+    public SaveData(List<StageSave> stagesSaved, int lastStageEntered, int lastWorldEntered)
     {
         this.stagesSaved = stagesSaved;
+        this.lastStageEntered = lastStageEntered;
+        this.lastWorldEntered = lastWorldEntered;
     }
 }

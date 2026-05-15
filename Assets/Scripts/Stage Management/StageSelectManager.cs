@@ -13,6 +13,7 @@ public class StageSelectManager : MonoBehaviour
     [SerializeField] GameObject playerCharacter;
     [SerializeField] Animator sceneFadeAnimator;
     [SerializeField] StageSelectCamera cameraScript;
+    [SerializeField] List<GameObject> Parallaxes;
 
     [Header("UI Elements")]
     [SerializeField] GameObject bigCoinIndicatorPrefab;
@@ -28,6 +29,7 @@ public class StageSelectManager : MonoBehaviour
     InputHandler inputHandler;
 
     int currentWaypoint = 0;
+    int currentWorldIndex = 0;
 
     Vector2 movementInput;
     Vector2 moveDirection;
@@ -41,7 +43,7 @@ public class StageSelectManager : MonoBehaviour
     float exitTime = 1;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //SaveSystem.DeleteSave();
         Time.timeScale = 1;
@@ -50,7 +52,16 @@ public class StageSelectManager : MonoBehaviour
         playerSpriteRenderer = playerCharacter.GetComponent<SpriteRenderer>();
         inputHandler = GetComponent<InputHandler>();
         stageWaypoints = stageWaypointsParent.GetComponentsInChildren<StageWaypoint>().ToList();
+        LoadStageSaves();
+        ChangeParallax(currentWorldIndex); 
+        UpdateUI();
+        StartCoroutine(WaitForSceneFade());
+    }
+
+    void LoadStageSaves()
+    {
         saveData = SaveSystem.Load();
+        //Find the furthest stage completed to see how many stages to enable
         StageWaypoint furthestStageCompleted = null;
         if (saveData != null)
         {
@@ -64,18 +75,26 @@ public class StageSelectManager : MonoBehaviour
                     furthestStageCompleted = stageWaypoint; //Update the furthest stage completed
                 }
             }
+            //Set player and camera position depending on what stage they last entered
+            currentWaypoint = saveData.lastStageEntered;
+            currentWorldIndex = saveData.lastWorldEntered;
+            cameraScript.SetCameraPosition(currentWorldIndex);
+            playerCharacter.transform.position = stageWaypoints[currentWaypoint].transform.position;
         }
-        if(furthestStageCompleted != null)
+        if (furthestStageCompleted != null)
         {
-            print(furthestStageCompleted);
             //allow the next stage from this stage to be reachable
             int index = stageWaypoints.FindIndex(x => x == furthestStageCompleted);
-            if(index < stageWaypoints.Count - 1) stageWaypoints[index + 1].SetStageReachable();
-            print(stageWaypoints[index + 1]);
+            if (index < stageWaypoints.Count - 1) stageWaypoints[index + 1].SetStageReachable();
         }
 
-        UpdateUI();
-        StartCoroutine(WaitForSceneFade());
+    }
+
+    void ChangeParallax(int newIndex)
+    {
+        Parallaxes[currentWorldIndex].SetActive(false);
+        Parallaxes[newIndex].SetActive(true);
+        currentWorldIndex = newIndex;
     }
 
     IEnumerator WaitForSceneFade()
@@ -212,7 +231,6 @@ public class StageSelectManager : MonoBehaviour
             GameObject bigCoin = Instantiate(bigCoinIndicatorPrefab, bigCoinsParent.transform);
             if (stageSave != null)
             {
-                print(stageSave.bigCoinsFound.Count);
                 //if those coins were found, show it
                 BigCoinIndicator bigCoinIndicator = bigCoin.GetComponent<BigCoinIndicator>();
                 if (stageSave.bigCoinsFound[i] == 1)
@@ -240,6 +258,7 @@ public class StageSelectManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => sceneFadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
         cameraScript.ShiftCamera(direction); //Slide the camera over
+        ChangeParallax(currentWorldIndex + direction);
         yield return new WaitForSeconds(1f);
         sceneFadeAnimator.SetTrigger("FadeIn");
         StartCoroutine(WaitForSceneFade());
@@ -247,6 +266,7 @@ public class StageSelectManager : MonoBehaviour
 
     IEnumerator LoadStage()
     {
+        SaveSystem.SaveLastStageEntered(currentWaypoint, currentWorldIndex);
         playerAnimator.SetBool("Victory", true);
         sceneFadeAnimator.SetTrigger("FadeOut");
         yield return new WaitForEndOfFrame();

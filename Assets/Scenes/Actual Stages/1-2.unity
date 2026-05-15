@@ -1170,7 +1170,7 @@ Animator:
   m_GameObject: {fileID: 212097413}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8d1ace330db4c840a68558f950ebe3b, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7772,7 +7772,7 @@ Tilemap:
       - {fileID: -2135669256, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -810366419, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -731766649, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 23, y: -1, z: 0}
@@ -22501,7 +22501,7 @@ Animator:
   m_GameObject: {fileID: 1867853051}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8d1ace330db4c840a68558f950ebe3b, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -23301,7 +23301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].y
-      value: 6.131092
+      value: 6.919757
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[1].x
@@ -23325,7 +23325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[3].y
-      value: 6.131092
+      value: 6.919757
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[0].X
@@ -23349,7 +23349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[2].Y
-      value: 61310920
+      value: 69197568
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[3].X
@@ -23357,7 +23357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[3].Y
-      value: 61310920
+      value: 69197568
       objectReference: {fileID: 0}
     - target: {fileID: 2096611437136755829, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23405,7 +23405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5832684772478252450, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Size.y
-      value: 23.936386
+      value: 23.147722
       objectReference: {fileID: 0}
     - target: {fileID: 5832684772478252450, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Offset.x
@@ -23413,7 +23413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5832684772478252450, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Offset.y
-      value: 18.099285
+      value: 18.493618
       objectReference: {fileID: 0}
     - target: {fileID: 5865073885586850937, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Name
