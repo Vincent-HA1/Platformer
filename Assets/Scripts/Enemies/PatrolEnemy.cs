@@ -7,7 +7,6 @@ public class PatrolEnemy : JumpingEnemy
         base.FixedUpdate();
         ApplyMovement();
     }
-
     protected override void Patrol()
     {
         if (!playerDetected)

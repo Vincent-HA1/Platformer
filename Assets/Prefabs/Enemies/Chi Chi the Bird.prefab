@@ -241,5 +241,6 @@ MonoBehaviour:
   maxDistanceToPlayer: 5
   chanceForFoodDrop: 0.2
   xMoveSpeed: 1.5
-  yMoveSpeed: 0.8
+  yMoveSpeed: 1
   maxMovementPerFrame: 2
+  maxPatrolDistance: 4

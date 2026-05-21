@@ -6,7 +6,15 @@ public class Bird : BaseEnemy
     [SerializeField] float xMoveSpeed = 4;
     [SerializeField] float yMoveSpeed = 2;
     [SerializeField] float maxMovementPerFrame = 4;
+    [SerializeField] float maxPatrolDistance = 3;
 
+
+    float startXPosition;
+    protected override void Start()
+    {
+        base.Start();
+        startXPosition = transform.position.x;
+    }
 
     // Update is called once per frame
     protected override void Update()
@@ -61,12 +69,41 @@ public class Bird : BaseEnemy
         transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
     }
 
+    protected override void ChangeDirection()
+    {
+        base.ChangeDirection();
+        moveDirection = -moveDirection;
+    }
+
     protected override void Patrol()
     {
         if (!playerDetected && moving)
         {
-            //Move until moving is false. The move timers dictate this
-            rigid.MovePosition(rigid.position + moveDirection * Time.fixedDeltaTime * xMoveSpeed);
+            Vector3 newPos = rigid.position + moveDirection * Time.fixedDeltaTime * xMoveSpeed;
+            if (ExceedPatrolDistance(newPos.x))
+            {
+                //flip direction
+                //moveDirection = -moveDirection;
+                print("exceed distance");
+                moveTimer = 0;
+            }
+            else
+            {
+                //Move until moving is false. The move timers dictate this
+                rigid.MovePosition(rigid.position + moveDirection * Time.fixedDeltaTime * xMoveSpeed);
+            }
+
         }
+    }
+
+    /// <summary>
+    /// Check if the new position is past the max distance in this direction
+    /// </summary>
+    /// <param name="newX">Next X position for the bird</param>
+    /// <returns></returns>
+    bool ExceedPatrolDistance(float newX)
+    {
+        float maxXPosition = moveDirection.x * maxPatrolDistance + startXPosition;
+        return moveDirection.x == 1 ? newX > maxXPosition : newX < maxXPosition;
     }
 }

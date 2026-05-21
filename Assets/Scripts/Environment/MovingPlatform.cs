@@ -12,6 +12,7 @@ public class MovingPlatform : PlatformToFollow
     [SerializeField] float moveSpeed = 5;
     [SerializeField] int minWaitTime = 2;
     [SerializeField] int maxWaitTime = 3;
+    [SerializeField] bool waitForPlayer = false; // whether the platform only starts moving if the player gets on it
 
     Rigidbody2D rigid;
     Vector2 currentStartPos;
@@ -21,6 +22,7 @@ public class MovingPlatform : PlatformToFollow
     float lerp = 0;
 
     bool waiting = false;
+    bool canMove = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class MovingPlatform : PlatformToFollow
         rigid = GetComponent<Rigidbody2D>();
         currentStartPos = startPoint.position;
         currentEndPos = endPoint.position;
+        lastPos = currentStartPos;
+        canMove = !waitForPlayer;
     }
 
     // Update is called once per frame
@@ -38,20 +42,15 @@ public class MovingPlatform : PlatformToFollow
 
     void MovePlatform()
     {
-        if (waiting) return;
+        if (waiting || !canMove) return;
         if (lerp < 1)
         {
             //Move towards the position for now
-            lerp += Time.fixedDeltaTime;
+            lerp += moveSpeed * Time.fixedDeltaTime;
             Vector2 origPos = platform.position;
             Vector2 newPos = Vector3.Lerp(currentStartPos, currentEndPos, lerp);
             Vector2 difference = newPos - lastPos; //calculate the difference so can move the player along with it
             rigid.MovePosition(newPos);
-            //if (playerMovement)
-            //{
-            //    SetPlatformDelta(difference);
-            //    //playerMovement.SetPlatformDelta(difference);
-            //}
             SetPlatformDelta(difference);
             lastPos = newPos;
         }
@@ -75,5 +74,21 @@ public class MovingPlatform : PlatformToFollow
         int waitTime = Random.Range(minWaitTime, maxWaitTime);
         yield return new WaitForSeconds(waitTime);
         waiting = false;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ContactPoint2D contact = collision.GetContact(0);
+            Vector2 normal = contact.normal;
+            if (normal.y < 0) //player above/landed on platform
+            {
+                // landed on top of the object (ground under us)
+                Debug.Log("Collision from above (landed on top of object).");
+                if(waitForPlayer) canMove = true;
+                SetPlatformDelta(Vector2.zero);
+            }
+        }
     }
 }

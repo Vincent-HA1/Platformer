@@ -12,6 +12,7 @@ public class GhostRecorder : MonoBehaviour
     [Header("Recording Attributes")]
     [SerializeField] List<GhostFrame> recordedFrames = new List<GhostFrame>();
     [SerializeField] bool isRecording = false;
+    [SerializeField] string fileName = "MyRecording";
 
     Animator anim;
     SpriteRenderer sr;
@@ -68,7 +69,7 @@ public class GhostRecorder : MonoBehaviour
 
         // Save into assets folder
 #if UNITY_EDITOR
-        string path = "Assets/Recordings/MyRecordedGhost.asset";
+        string path = $"Assets/Recordings/{fileName}.asset";
         // This checks if the file exists and returns a new name if it does
         string uniquePath = AssetDatabase.GenerateUniqueAssetPath(path);
 

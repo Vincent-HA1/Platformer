@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IceBlock : MonoBehaviour
 {
+    PlatformToFollow platformScript;
     public LayerMask groundLayer;
     [Header("Ice Block Attributes")]
     [SerializeField] float iceSlideSpeed = 7;
@@ -12,15 +13,21 @@ public class IceBlock : MonoBehaviour
     CompositeCollider2D compositeCollider;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
-    [SerializeField] bool sliding = false;
+    bool sliding = false;
     float slideDirection;
 
+    ContactFilter2D contactFilter;
     // Start is called before the first frame update
     void Start()
     {
         compositeCollider = GetComponent<CompositeCollider2D>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        platformScript = GetComponent<PlatformToFollow>();
+        contactFilter = new ContactFilter2D();
+        contactFilter.SetLayerMask(groundLayer);
+        contactFilter.useTriggers = false;
+        contactFilter.useLayerMask = true;
     }
 
     // Update is called once per frame
@@ -36,12 +43,20 @@ public class IceBlock : MonoBehaviour
             //Start the check outside of the sprite
             Vector2 checkPos = (Vector2)transform.position + new Vector2(slideDirection * spriteRenderer.bounds.extents.x, 0);
             RaycastHit2D[] results = new RaycastHit2D[10];
-            int wallsInFront = compositeCollider.Raycast(new Vector2(slideDirection, 0), results, wallCheckDistance, groundLayer);
+            //Physics2D.BoxCast(transform.position, new Vector2(wallCheckDistance * slideDirection, 0.2f), 0, new Vector2(slideDirection, 0), contactFilter, results, wallCheckDistance);
+            int wallsInFront = Physics2D.BoxCastNonAlloc(checkPos, new Vector2(wallCheckDistance, 0.2f), 0, new Vector2(slideDirection, 0), results, 0, groundLayer);//compositeCollider.Raycast(new Vector2(slideDirection, 0), results, wallCheckDistance, groundLayer);
             // Stop sliding if hitting a wall (that is not self)
             if (wallsInFront > 0)
             {
-                print(results[0].collider);
-                sliding = false;
+                // Remove self colliders
+                foreach(RaycastHit2D hit in results)
+                {
+                    if(hit.collider !=null && hit.collider.gameObject == gameObject)
+                    {
+                        wallsInFront -= 1;
+                    }
+                }
+                if(wallsInFront > 0) sliding = false;
             }
         }
     }
@@ -50,6 +65,7 @@ public class IceBlock : MonoBehaviour
     {
         if (collision.CompareTag("Hitbox") && !sliding)
         {
+            //Check if it contacted the actual ice block
             KnockAway();
             //Slide away from the hit
             slideDirection = Mathf.Sign(transform.position.x - collision.transform.position.x);
@@ -89,6 +105,7 @@ public class IceBlock : MonoBehaviour
             //Move the block if it needs to be moved
             Vector2 movement = new Vector2(slideDirection * iceSlideSpeed * Time.fixedDeltaTime, 0);
             rigid.MovePosition(rigid.position + movement);
+            if(platformScript) platformScript.SetPlatformDelta(movement);
         }
 
     }

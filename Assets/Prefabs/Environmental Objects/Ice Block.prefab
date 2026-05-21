@@ -233,5 +233,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264
   iceSlideSpeed: 7
-  wallCheckDistance: 0.5
-  sliding: 0
+  wallCheckDistance: 0.3

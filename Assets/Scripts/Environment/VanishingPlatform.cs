@@ -5,6 +5,7 @@ public class VanishingPlatform : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] float vanishTime = 1.5f;
     [SerializeField] float vanishDelay = 0.5f;
+    [SerializeField] bool startVanished = false;
 
     SpriteRenderer spriteRenderer;
     Collider2D platformCollider;
@@ -23,6 +24,10 @@ public class VanishingPlatform : MonoBehaviour
         //Set the colours to lerp to. So just visible and transparent
         startColor = spriteRenderer.color;
         endColor = new Color(startColor.r, startColor.g, startColor.b, 0);
+        if (startVanished)
+        {
+            FlipColours();
+        }
     }
 
     // Update is called once per frame
@@ -55,11 +60,16 @@ public class VanishingPlatform : MonoBehaviour
                 //Flip the colours (so go back to transparent/visible), and reset the timer
                 vanishTimer = vanishTime;
                 changing = true;
-                Color temp = startColor;
-                startColor = endColor;
-                endColor = temp;
+                FlipColours();
             }
 
         }
+    }
+
+    void FlipColours()
+    {
+        Color temp = startColor;
+        startColor = endColor;
+        endColor = temp;
     }
 }

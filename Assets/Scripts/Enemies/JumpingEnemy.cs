@@ -40,7 +40,9 @@ public abstract class JumpingEnemy : BaseEnemy
     {
         base.Update();
         float xOffset = jumping ? 0 : groundCheckXOffset; //if jumping, dont use the offset
-        onGround = Physics2D.OverlapCircle(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.18f, groundLayer); //offset the check so dont go over the ledge
+        Collider2D[] groundColliders = Physics2D.OverlapCircleAll(groundPos.position + new Vector3(xOffset * moveDirection.x, 0), 0.18f, groundLayer); //offset the check so dont go over the ledge
+        int groundCount = groundColliders.Count(x => x.gameObject != this.gameObject); //Ignore all ground colliders that are on this gameobject
+        onGround = groundCount > 0; 
         ManageJumpTimer();
         HandleJumpInteraction();
     }

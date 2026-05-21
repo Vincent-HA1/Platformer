@@ -157,6 +157,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Ice
     bool onIce = false;
+    float directionOfIceAcceleration;
 
     bool blockHorizontalMovement = false;
     float health;
@@ -706,6 +707,13 @@ public class PlayerMovement : MonoBehaviour
         if (currentHorizontalDir != movementInput.x)
             xMovement = 0f;
 
+        //If getting off the ice (jumping off) in the opposite direction, make sure to slow the change of direction down as well
+        if(directionOfIceAcceleration == movementInput.x && Mathf.Sign(horizontalVelocity) != directionOfIceAcceleration && !onIce)
+        {
+            xMovement = 0f;
+            directionOfIceAcceleration = 0;
+        }
+
         // If the current direction of movement is different to the player's input, accelerate towards the correct direction (not immediate)
         if (xMovement != movementInput.x)
         {
@@ -730,31 +738,44 @@ public class PlayerMovement : MonoBehaviour
 
     void ApplyMovement()
     {
-        if (attacking) return;
+        Vector2 finalMovement = new Vector2();
+        //Only add new movement if not attacking
+        if (!attacking)
+        {
+
+        }
         // Extra jump force when holding jump (only if they haven't let go yet). Don't apply when above max velocity
         if (inputHandler.jumpHeld && verticalVelocity > 0f && !stoppedHoldingJump && !inWater && verticalVelocity < maxVerticalVelocity)
         {
             verticalVelocity += extraJumpForce;
         }
 
-        //Decide on stats based on if in water or not
-        float moveSpeed = inWater ? swimSpeed : groundMoveSpeed;
+        //Decide on stats based on if in water or not (or attacking)
+        float moveSpeed = inWater ? swimSpeed :  attacking ? 0 :groundMoveSpeed;
         float gravityValue = inWater ? waterGravityForce : gravityForce;
         float maximumNegativeVelocity = inWater ? terminalWaterNegativeVelocity : (gliding ? glideNegativeVelocity : terminalNegativeVelocity);
 
         // Ice movement
-        if(onIce && !kicking)
+        if (onIce && !kicking)
         {
-            float directionOfIceAcceleration; //direction of acceleration
+            //float directionOfIceAcceleration; //direction of acceleration
             bool skidding = false; //If the player has stopped moving, acceleration should go in the opposite way of travel
-            if(xMovement == 0)
+            if (xMovement == 0)
             {
                 directionOfIceAcceleration = -Mathf.Sign(horizontalVelocity); //so decelerate in the other direction
                 skidding = true;
             }
             else
             {
-                directionOfIceAcceleration = xMovement;
+                //If the player is starting from a standing point, then make sure they have to accelerate on the ice
+                if (horizontalVelocity == 0)
+                {
+                    directionOfIceAcceleration = -xMovement;
+                }
+                else
+                {
+                    directionOfIceAcceleration = xMovement;
+                }
             }
             if (directionOfIceAcceleration <= 0)
             {
@@ -796,8 +817,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Compute displacements (SUVAT)
         // If on ice, accelerate into chosen direction
-        float dx = onIce?
-            horizontalVelocity * Time.fixedDeltaTime + 0.5f * iceTurnAcceleration * xMovement * Time.fixedDeltaTime * Time.fixedDeltaTime:
+        float dx = onIce ?
+            horizontalVelocity * Time.fixedDeltaTime + 0.5f * iceTurnAcceleration * xMovement * Time.fixedDeltaTime * Time.fixedDeltaTime :
             horizontalVelocity * Time.fixedDeltaTime;
 
 
@@ -822,7 +843,7 @@ public class PlayerMovement : MonoBehaviour
         }
         //If no horizontal movement, block it
         if (blockHorizontalMovement) dx = 0;
-        Vector2 finalMovement = new Vector2(dx, dy);
+        finalMovement = new Vector2(dx, dy);
 
         //Platform movement
         if (platformToFollow)
@@ -956,23 +977,6 @@ public class PlayerMovement : MonoBehaviour
         {
             // landed on top of the object (ground under us)
             Debug.Log("Collision from above (landed on top of object).");
-
-            ////Check if this is ice
-            //if (onGround && collision.gameObject.CompareTag("Ice"))
-            //{
-            //    if (!onIce)
-            //    {
-            //        print("on ice");
-            //        //On ice = true
-            //        //if (!onIce) horizontalVelocity = 0;
-            //        onIce = true;
-            //    }
-
-            //}
-            //else
-            //{
-            //    onIce = false;
-            //}
         }
         else if (normal.y < -threshold) //For bumping head on objects
         {
