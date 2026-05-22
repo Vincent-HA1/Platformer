@@ -160,6 +160,7 @@ MonoBehaviour:
   moveSpeed: 1
   minWaitTime: 2
   maxWaitTime: 3
+  waitForPlayer: 0
 --- !u!50 &8733864663760920471
 Rigidbody2D:
   serializedVersion: 4
@@ -184,7 +185,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 1
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &4755761061420275415
@@ -201,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vanishTime: 1.5
   vanishDelay: 0.5
+  startVanished: 0
 --- !u!1 &2351041002759737905
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +267,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0021739006, y: 0.4743141}
+  m_Offset: {x: 0.0000004172325, y: 0.4743141}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -276,7 +278,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9483185, y: 0.22005868}
+  m_Size: {x: 1.9917883, y: 0.22005868}
   m_EdgeRadius: 0
 --- !u!1 &6036814045753870111
 GameObject:
