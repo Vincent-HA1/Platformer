@@ -114,11 +114,11 @@ public class StageSelectManager : MonoBehaviour
         UpdateAnims();
         MoveToWaypoint();
         CheckToLoadStage();
-        if (inputHandler.cancelPressed)
+        if (inputHandler.cancelPressed && !movingToNextWorld)
         {
             exitTimer = exitTime;
         }
-        if (inputHandler.cancelHeld)
+        if (inputHandler.cancelHeld && !movingToNextWorld)
         {
             exitTimer -= Time.deltaTime;
             holdOutline.fillAmount = (exitTime - exitTimer) / exitTime;
@@ -137,15 +137,13 @@ public class StageSelectManager : MonoBehaviour
     //Don't allow holding the movement input.  
     void GetMovementInput()
     {
-        if (movingToNextWorld) return; //no inputs when moving to next world
+        if (movingToNextWorld || inputHandler.cancelHeld) return; //no inputs when moving to next world
         if (!moving)
         {
             Vector2 newInput = new Vector2(inputHandler.movement.x, 0f);
             //If the vector has changed, assign it. This prevents holding a direction (so the player has to do presses to move)
             if (newInput != lastDirection)
             {
-                print(newInput);
-                print(movementInput);
                 movementInput = newInput;
                 lastDirection = movementInput;
             }

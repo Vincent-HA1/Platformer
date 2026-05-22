@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -26,12 +27,21 @@ public class OptionsMenu : MonoBehaviour
     void Start()
     {
         backgroundImage = GetComponent<Image>();
-        eventSystem = EventSystem.current;
+        //eventSystem = EventSystem.current;
         inputHandler = FindObjectOfType<InputHandler>();
         optionsButton.onClick.AddListener(() => CloseScreen(parentUIScreen, optionsMenu, firstOptionsButton));
         keyboardConfigButton.onClick.AddListener(OpenKeyboardConfig);
         gamepadConfigButton.onClick.AddListener(OpenGamepadConfig);
         backgroundImage.enabled = false;
+        StartCoroutine(SetEventSystem());
+    }
+
+    IEnumerator SetEventSystem()
+    {
+        yield return null;
+        //Wait for Event system to finish updating with rebindings and input actions
+        yield return new WaitUntil(() => EventSystem.current != null);
+        eventSystem = EventSystem.current;
     }
 
     // Update is called once per frame
@@ -53,9 +63,9 @@ public class OptionsMenu : MonoBehaviour
             {
                 CloseScreen(gamepadConfigScreen, optionsMenu, gamepadConfigButton);
             }
-            else if (optionsMenu.activeInHierarchy)//optionsScreen.activeInHierarchy)
+            else if (optionsMenu.activeInHierarchy)
             {
-                CloseScreen(optionsMenu, parentUIScreen, optionsButton);//optionsScreen, parentUIScreen, optionsButton);
+                CloseScreen(optionsMenu, parentUIScreen, optionsButton);
                 backgroundImage.enabled = false;
             }
         }

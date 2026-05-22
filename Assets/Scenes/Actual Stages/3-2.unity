@@ -5295,6 +5295,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 779144381}
     - target: {fileID: 3029634873663627833, guid: dbdfef45122d8364ab99b8394f33f62f, type: 3}
+      propertyPath: stageSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a1c6dd70cdfee2448ed60aba8f2a523, type: 3}
+    - target: {fileID: 3029634873663627833, guid: dbdfef45122d8364ab99b8394f33f62f, type: 3}
       propertyPath: hudManager
       value: 
       objectReference: {fileID: 779144380}

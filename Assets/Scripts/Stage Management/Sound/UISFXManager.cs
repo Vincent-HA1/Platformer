@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -24,9 +25,23 @@ public class UISFXManager : MonoBehaviour
     void Awake()
     {
         uiAudioSource = GetComponent<AudioSource>();
+        StartCoroutine(WaitForBindings());
+    }
+
+    IEnumerator WaitForBindings()
+    {
+        yield return null;
+        //Wait for Event system to finish updating with rebindings and input actions
+        yield return new WaitUntil(() => EventSystem.current != null);
+        InitialiseEventBindings();
+    }
+
+    void InitialiseEventBindings()
+    {
         eventSystem = EventSystem.current;
         if (eventSystem != null)
             uiModule = eventSystem.GetComponent<InputSystemUIInputModule>();
+
         // If you're using InputSystemUIInputModule, prefer those actions (they are the active ones).
         if (uiModule != null)
         {
@@ -34,11 +49,18 @@ public class UISFXManager : MonoBehaviour
             submitAction = uiModule.submit.action;
             navigateAction = uiModule.move.action;
         }
+
+        // subscribe safely (action may be null if not configured)
+        if (submitAction != null)
+        {
+            submitAction.performed += OnSubmit;
+        }
+        if (navigateAction != null) navigateAction.performed += OnNavigate;
     }
 
     private void LateUpdate()
     {
-        if (!eventSystem.enabled) return;
+        if (!eventSystem || !eventSystem.enabled) return;
         //Check for UI navigation
         if (eventSystem.currentSelectedGameObject != currentlySelectedGameobject && eventSystem.currentSelectedGameObject != null)
         {
@@ -56,13 +78,6 @@ public class UISFXManager : MonoBehaviour
         }
         navigated = false;
     }
-    void OnEnable()
-    {
-        // subscribe safely (action may be null if not configured)
-        if (submitAction != null) submitAction.performed += OnSubmit;
-        if (navigateAction != null) navigateAction.performed += OnNavigate;
-
-    }
 
     void OnDisable()
     {
@@ -72,6 +87,7 @@ public class UISFXManager : MonoBehaviour
 
     private void OnNavigate(InputAction.CallbackContext ctx)
     {
+        print("navigate");
         navigated = true;
     }
 
