@@ -60,7 +60,7 @@ public class StageSelectManager : MonoBehaviour
 
     void LoadStageSaves()
     {
-        saveData = SaveSystem.Load();
+        saveData = SaveSystem.Load(SaveSystem.currentSaveSlotUsed);
         //Find the furthest stage completed to see how many stages to enable
         StageWaypoint furthestStageCompleted = null;
         if (saveData != null)

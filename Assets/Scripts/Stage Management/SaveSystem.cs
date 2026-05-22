@@ -6,12 +6,15 @@ using UnityEngine;
 /* Static class used to handle saving the game */
 public static class SaveSystem
 {
-    private static string savePath = Application.persistentDataPath + "/savefile.json";
+    public static int currentSaveSlotUsed;
+    private static int bigCoinsTotal = 17;
+    //private static string savePath = Application.persistentDataPath + "/savefile.json";
 
     /* Save the stage to the save file */
     public static void Save(StageSave stageSave)
     {
-        SaveData data = Load();
+        SaveData data = Load(currentSaveSlotUsed);
+        string savePath = GetSavePath(currentSaveSlotUsed);
         //If there are no stages saved, initialise the list of saves
         if (data == null)
         {
@@ -35,7 +38,8 @@ public static class SaveSystem
 
     public static void SaveLastStageEntered(int lastStageEntered, int lastWorldEntered)
     {
-        SaveData data = Load();
+        SaveData data = Load(currentSaveSlotUsed);
+        string savePath = GetSavePath(currentSaveSlotUsed);
         //If there are no stages saved, initialise the list of saves
         if (data == null)
         {
@@ -47,8 +51,9 @@ public static class SaveSystem
         File.WriteAllText(savePath, json);
     }
 
-    public static SaveData Load()
+    public static SaveData Load(int saveSlot)
     {
+        string savePath = GetSavePath(saveSlot);
         if (File.Exists(savePath))
         {
             string json = File.ReadAllText(savePath);
@@ -57,14 +62,33 @@ public static class SaveSystem
         return null; // No save file found
     }
 
-    public static void DeleteSave()
+    public static void DeleteSave(int saveSlot)
     {
+        string savePath = GetSavePath(saveSlot);
         if (File.Exists(savePath))
         {
             File.Delete(savePath);
             Debug.Log("Save deleted");
         }
     }
+
+    public static void SetCurrentSaveSlot(int saveSlot)
+    {
+        currentSaveSlotUsed = saveSlot;
+    }
+
+    public static int GetBigCoinsTotal()
+    {
+        return bigCoinsTotal;
+    }
+
+    // Change save path with the save slot index
+    private static string GetSavePath(int saveSlot)
+    {
+        return Application.persistentDataPath + $"/savefile_{saveSlot}.json";
+    }
+
+
 }
 [Serializable]
 public class SaveData

@@ -9,12 +9,14 @@ public class TitleScreen : MonoBehaviour
     [Header("References")]
     [SerializeField] Animator sceneFadeAnimator;
     [SerializeField] InputHandler inputHandler;
+    [SerializeField] SaveSlotManager saveSlotManager;
 
     [Header("UI References")]
     [SerializeField] Button startButton;
     [SerializeField] Button quitButton;
     [SerializeField] GameObject titleScreen;
     [SerializeField] GameObject optionsScreen;
+
     EventSystem eventSystem;
 
     // Start is called before the first frame update
@@ -26,7 +28,8 @@ public class TitleScreen : MonoBehaviour
         eventSystem = EventSystem.current;
         eventSystem.enabled = false;
         Time.timeScale = 1;
-        startButton.onClick.AddListener(LoadScene);
+        //startButton.onClick.AddListener(OpenSaveSlots);//LoadScene);
+        saveSlotManager.LoadSaveSlot += LoadScene;
         quitButton.onClick.AddListener(QuitGame);
         StartCoroutine(WaitForSceneFade());
     }
@@ -49,8 +52,10 @@ public class TitleScreen : MonoBehaviour
     }
 
 
-    void LoadScene()
+    void LoadScene(int saveSlotChosen)
     {
+        //Set the save slot to use (chosen on the load screen)
+        SaveSystem.currentSaveSlotUsed = saveSlotChosen;
         StartCoroutine(LoadSceneAfterFade());
         EventSystem.current.enabled = false;
     }

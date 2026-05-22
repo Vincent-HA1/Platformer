@@ -113,10 +113,10 @@ TextureImporter:
       name: SaveSlots_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 145
-        width: 46
-        height: 14
+        x: 20
+        y: 103
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,13 +134,13 @@ TextureImporter:
       name: SaveSlots_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 129
-        width: 46
-        height: 14
+        x: 43
+        y: 97
+        width: 74
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 43
-        y: 97
+        y: 65
         width: 74
         height: 30
       alignment: 0
@@ -176,13 +176,13 @@ TextureImporter:
       name: SaveSlots_3
       rect:
         serializedVersion: 2
-        x: 36
-        y: 84
-        width: 9
-        height: 9
+        x: 43
+        y: 33
+        width: 74
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0

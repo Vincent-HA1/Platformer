@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
         AssignEvents();
         //Load save for this stage
         string sceneName = SceneManager.GetActiveScene().name;
-        SaveData data = SaveSystem.Load();
+        SaveData data = SaveSystem.Load(SaveSystem.currentSaveSlotUsed);
         currentStageSave = new StageSave(sceneName, Enumerable.Repeat(0, bigCoins.Count).ToList());
         if (data != null)
         {
