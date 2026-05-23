@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 [CreateAssetMenu(menuName = "Input/Control Icon Database", fileName = "ControlIconDatabase")]
 public class ControlIconDatabase : ScriptableObject
@@ -85,7 +88,9 @@ public class ControlIconDatabase : ScriptableObject
         if (e != null) { e.icon = sprite; e.label = label; }
         else entries.Add(new Entry { controlPath = controlPath, icon = sprite, label = label });
         BuildCache();
-        UnityEditor.EditorUtility.SetDirty(this);
+#if UNITY_EDITOR        
+        EditorUtility.SetDirty(this);
+#endif
     }
 
     /// <summary>
@@ -95,6 +100,8 @@ public class ControlIconDatabase : ScriptableObject
     {
         entries.RemoveAll(x => string.Equals(x.controlPath, controlPath, StringComparison.OrdinalIgnoreCase));
         BuildCache();
-        UnityEditor.EditorUtility.SetDirty(this);
+#if UNITY_EDITOR        
+        EditorUtility.SetDirty(this);
+#endif    
     }
 }
