@@ -1188,7 +1188,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1662007635, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
       - {fileID: 1130332129, guid: dd8af6f71e3869345840ec629398ea8d, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 275, y: 8, z: 0}
@@ -14434,7 +14434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].y
-      value: 7.750106
+      value: 7.7501073
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[1].x
@@ -14442,15 +14442,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[1].y
-      value: 27.650951
+      value: 29.071447
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[2].y
-      value: 27.650923
+      value: 29.071419
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[3].y
-      value: 7.750106
+      value: 7.7501073
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[0].X
@@ -14458,15 +14458,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[0].Y
-      value: 276509504
+      value: 290714464
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[1].Y
-      value: 276509504
+      value: 290714464
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[2].Y
-      value: 77501056
+      value: 77501072
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[3].X
@@ -14474,7 +14474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772916178279299382, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[3].Y
-      value: 77501056
+      value: 77501072
       objectReference: {fileID: 0}
     - target: {fileID: 2096611437136755829, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14522,7 +14522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5832684772478252450, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Size.y
-      value: 19.900846
+      value: 21.321339
       objectReference: {fileID: 0}
     - target: {fileID: 5832684772478252450, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Offset.x
@@ -14530,7 +14530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5832684772478252450, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Offset.y
-      value: 17.70053
+      value: 18.410776
       objectReference: {fileID: 0}
     - target: {fileID: 5865073885586850937, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
       propertyPath: m_Name
@@ -25020,7 +25020,7 @@ Tilemap:
       - {fileID: -2135669256, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -810366419, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -731766649, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 21, y: -1, z: 0}
@@ -25075,7 +25075,7 @@ Tilemap:
       - {fileID: -2135669256, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -810366419, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
       - {fileID: -731766649, guid: ebf26372cc6cd964494356b87a5a060a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 26, y: -1, z: 0}
