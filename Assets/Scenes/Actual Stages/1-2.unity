@@ -23423,6 +23423,30 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1097585107}
+    - target: {fileID: 8846213622404735784, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846213622404735784, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
+      propertyPath: m_AssetsPPU
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846213622404735784, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
+      propertyPath: m_UpscaleRT
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846213622404735784, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
+      propertyPath: m_CropFrameX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846213622404735784, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
+      propertyPath: m_CropFrameY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846213622404735784, guid: 0d073b7baab93964d90022ff66f42d21, type: 3}
+      propertyPath: m_PixelSnapping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
